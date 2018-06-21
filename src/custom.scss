@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import 'settings';
+@import 'foundation';
+@import 'header';
+
+@include foundation-everything;
+
+/** TEMPLATE SPECIFIC */
+@import 'pricingopts';
+@import 'marquee';
+
+/** OVERRIDES */
+body {
+    overflow-x: hidden;
+    min-width: 0!important;
+}
+
+.l-footer {
+    .color_footer-bottom {
+        background-color: $black !important;
+    }
+}
+

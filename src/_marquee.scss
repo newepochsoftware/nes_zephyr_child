@@ -1,0 +1,54 @@
+$skew: -15deg;
+
+.marquee {
+  position: relative;
+  height: 40rem;
+
+  .angle_1 {
+    position: absolute;
+    z-index: 5;
+    height: 45rem;
+    width: 100%;
+    -webkit-transform: skewY($skew);
+    transform: skewY($skew);
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+    background: rgb(175,196,255);
+    background:    -moz-linear-gradient(top, rgba(175,196,255,1) 0%, rgba(61,87,229,1) 100%);
+    background:   linear-gradient(to bottom, rgba(175,196,255,1) 0%, rgba(61,87,229,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(175,196,255,1) 0%, rgba(61,87,229,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#799cfc', endColorstr='#3d57e5',GradientType=0 );
+
+    &.offset_2 {
+      z-index: 4;
+      top: 15rem;
+      opacity: 0.5;
+      -webkit-transform: skewY($skew - 5);
+      transform: skewY($skew - 5);
+    }
+    &.offset_3 {
+      z-index: 3;
+      top: 30rem;
+      opacity: 0.25;
+      -webkit-transform: skewY($skew - 10);
+      transform: skewY($skew - 10);
+    }
+  }
+
+  .grid-container {
+    position: relative;
+    z-index: 10;
+    padding-top: 4rem;
+
+    .logo {
+      position: relative;
+      background-image: url('../img/NES_LogoAlt_whiteKnockout.png');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 70px;
+      width: 200px;
+    }
+  }
+  
+}

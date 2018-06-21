@@ -1,0 +1,31 @@
+{
+  "name": "nes-zephyrchild",
+  "version": "1.0.0",
+  "description": "Child Theme for NewEpoch Software",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1",
+    "gulp-cssmin": "^0.2.0",
+    "postcss-scss": "^1.0.5"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "postcss-strip-inline-comments": "^0.1.5"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newepochsoftware/nes_zephyr_child.git"
+  },
+  "author": "Tom Madrid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newepochsoftware/nes_zephyr_child/issues"
+  },
+  "homepage": "https://github.com/newepochsoftware/nes_zephyr_child#readme"
+}
