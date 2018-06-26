@@ -41,7 +41,7 @@
   <div class="fingerprint">
     <css-doodle>
       :doodle { 
-        @grid: 1x10 / 61.8vmin; 
+        @grid: 1x10 / 62rem; 
       }
 
       @place-cell: center; 
