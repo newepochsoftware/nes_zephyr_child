@@ -25,3 +25,7 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
     gulp.watch('parts/*.php', browserSync.reload);
     gulp.watch('header-2018.php', browserSync.reload);
 });
+
+gulp.task('build', ['sass'], function() {
+    console.log('Gettin\' SASSY! Please hold.');
+});
