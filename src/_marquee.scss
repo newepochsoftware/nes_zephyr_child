@@ -2,36 +2,54 @@ $skew: -15deg;
 
 .marquee {
   position: relative;
-  height: 40rem;
 
   .angle_1 {
     position: absolute;
     z-index: 5;
-    height: 45rem;
+    left: 50%;
+    height: 70rem;
     width: 100%;
-    -webkit-transform: skewY($skew);
-    transform: skewY($skew);
+    -webkit-transform: translateX(-50%) skewY($skew + 2.5);
+    transform: translateX(-50%) skewY($skew + 2.5);
     -webkit-transform-origin: 0;
     transform-origin: 0;
-    background: rgb(175,196,255);
-    background:    -moz-linear-gradient(top, rgba(175,196,255,1) 0%, rgba(61,87,229,1) 100%);
-    background:   linear-gradient(to bottom, rgba(175,196,255,1) 0%, rgba(61,87,229,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(175,196,255,1) 0%, rgba(61,87,229,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#799cfc', endColorstr='#3d57e5',GradientType=0 );
-
+    background: rgb(255,255,255);
+    /*
+    background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
+    background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
+  
     &.offset_2 {
       z-index: 4;
-      top: 15rem;
-      opacity: 0.5;
-      -webkit-transform: skewY($skew - 5);
-      transform: skewY($skew - 5);
+      top: 4rem;
+      transform: translateX(-50%) skewY($skew + 1.25);
+      -webkit-transform: translateX(-50%) skewY($skew + 1.25);
+      background: rgb(255,255,255);
+      background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%);
+      background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%);
     }
     &.offset_3 {
       z-index: 3;
-      top: 30rem;
-      opacity: 0.25;
-      -webkit-transform: skewY($skew - 10);
-      transform: skewY($skew - 10);
+      top: 8rem;
+      transform: translateX(-50%) skewY($skew);
+      -webkit-transform: translateX(-50%) skewY($skew);
+      background: rgb(255,255,255);
+      background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+      background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+    }
+    */
+    &.offset_4 {
+      z-index: 2;
+      top: 77rem;
+      transform: translateX(-50%) skewY($skew);
+      -webkit-transform: translateX(-50%) skewY($skew);
+      background: rgb(255,255,255);
+      background:    -moz-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+      background:   linear-gradient(to bottom, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+      box-shadow: 0px 10px 50px rgba(0,0,0,0.09);
     }
   }
 
@@ -40,15 +58,106 @@ $skew: -15deg;
     z-index: 10;
     padding-top: 4rem;
 
-    .logo {
+    .logo-grid {
+      margin-bottom: 5rem;
+
+      .logo {
+        position: relative;
+        background-image: url('../img/NES_LogoAlt.png');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 70px;
+        width: 210px;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    line-height: 2.25rem;
+    color: $black;
+
+    .hilite {
+      font-weight: 700;
+      color: $blue;
+    }
+  }
+
+  .request_demo {
+    margin-top: 2rem;
+
+    a {
+      display: inline-block;
       position: relative;
-      background-image: url('../img/NES_LogoAlt_whiteKnockout.png');
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 70px;
-      width: 200px;
+      border: 2px solid $blue;
+      border-radius: 25px;
+      padding: 10px 20px;
+      height: 100%;
+      background-color: $blue;
+      color: $white;
+      font-size: 1.25rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+
+      &:hover {
+        background: none;
+        color: $blue;
+        box-shadow: none;
+        top: 1px;
+        left: 1px;
+      }
+    }
+  }
+
+  .trusted-grid {
+    width: 75%;
+    opacity: 0.75;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 5rem;
+      text-transform: uppercase;
+    }
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0.5rem 2.5rem 0.5rem 0;
+      max-height: 80px;
+    }
+    .cell {
+      text-align: center;
+    }
+
+    @include breakpoint(small down){
+      width: 100%;
+      padding: 0 1rem;
     }
   }
   
+  .laptop {
+    position: absolute;
+    background-size: contain;
+    background-image: url('../img/NES_Laptop.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 800px;
+    height: 510px;
+  }
+
 }

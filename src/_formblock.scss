@@ -1,0 +1,49 @@
+.form-block {
+  position: relative;
+  z-index: 5;
+  margin: 15rem 0;
+  color: $white;
+
+  .headline {
+    i {
+      font-size: 5rem;
+    }
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 2.25rem;
+      color: $white;
+      margin: 4rem 0;
+    }
+  }
+  p, .gform_body label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    color: $white;
+  }
+  .gform_wrapper {
+    margin: 0;
+
+    .gfield_label {
+      text-transform: uppercase;
+    }
+
+    ul {
+      li.gfield {
+        margin: 0 0 1.5rem 0;
+      }
+    }
+
+    .lv-form-1 {
+      .gform_footer {
+        input[type=submit] {
+          background-color: $orange;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  
+}

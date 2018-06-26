@@ -7,13 +7,24 @@
 @include foundation-everything;
 
 /** TEMPLATE SPECIFIC */
-@import 'pricingopts';
 @import 'marquee';
+@import 'formblock';
+@import 'midsection';
+@import 'features';
+@import 'pricingopts';
+
 
 /** OVERRIDES */
 body {
     overflow-x: hidden;
     min-width: 0!important;
+
+    .text-center {
+        text-align: center;
+    }
+    .text-right {
+        text-align: right;
+    }
 }
 
 .l-footer {

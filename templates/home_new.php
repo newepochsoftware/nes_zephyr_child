@@ -6,6 +6,11 @@
 
 get_header('2018'); ?>
 
+<?php get_template_part( 'parts/home', 'formblock' ); ?>
+
+<?php get_template_part( 'parts/home', 'midsection' ); ?>
+
+<?php get_template_part( 'parts/home', 'features' ); ?>
 
 <?php get_template_part( 'parts/home', 'pricingopts' ); ?>
 

@@ -12,3 +12,8 @@ function add_nes2018_css(){
   wp_dequeue_style( 'bsf-Defaults' );
 }
 add_action( 'wp_enqueue_scripts', 'add_nes2018_css', 999);
+
+function add_css_doodle() {
+  wp_enqueue_script( 'nes2018-css-doodle', 'https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.3.2/css-doodle.min.js', array() );
+}
+add_action( 'wp_enqueue_scripts', 'add_css_doodle' );

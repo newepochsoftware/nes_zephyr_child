@@ -1,0 +1,65 @@
+.features {
+  position: relative;
+  z-index: 5;
+  margin-top: -30rem;
+  margin-bottom: 5rem;
+
+  i {
+    font-size: 5rem;
+    color: $dark-gray;
+  }
+  h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.25rem;
+    margin: 2rem 0 3rem;
+    color: $dark-gray;
+  }
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    color: $dark-gray;
+  }
+
+  .feature-row {
+    margin: 10rem auto;
+
+    .cell {
+      position: relative;
+
+      .tablet {
+        position: absolute;
+        background-size: contain;
+        background-image: url('../img/svg/_tablet.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 550px;
+        height: 390px;
+        transform: rotate(15deg);
+        left: 15%;
+
+        &.left {
+          position: relative;
+          left: -150%;
+        }
+      }
+      .laptop {
+        position: absolute;
+        background-size: contain;
+        background-image: url('../img/svg/_laptop.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 700px;
+        height: 420px;
+        transform: rotate(15deg);
+        left: 5%;
+
+        &.left {
+          position: relative;
+          left: -150%;
+        }
+      }
+    }
+  }
+}
