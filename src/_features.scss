@@ -15,6 +15,10 @@
     line-height: 2.25rem;
     margin: 2rem 0 3rem;
     color: $dark-gray;
+
+    @include breakpoint(small down){
+      margin-bottom: 1rem;
+    }
   }
   p {
     font-family: 'Montserrat', sans-serif;
@@ -43,6 +47,10 @@
           position: relative;
           left: -150%;
         }
+
+        @include breakpoint(small down){
+          width: 90%;
+        }
       }
       .laptop {
         position: absolute;
@@ -58,6 +66,10 @@
         &.left {
           position: relative;
           left: -150%;
+        }
+
+        @include breakpoint(small down){
+          width: 90%;
         }
       }
     }

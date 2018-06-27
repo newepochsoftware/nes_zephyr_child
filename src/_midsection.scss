@@ -17,6 +17,10 @@ $skew: -15deg;
   p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.35rem;
+
+    @include breakpoint(small down){
+      padding: 0 1rem;
+    }
   }
 
   .angle_2 {
@@ -46,6 +50,10 @@ $skew: -15deg;
       opacity: .5;
       mix-blend-mode: color-burn;
     }
+
+    @include breakpoint(small down){
+      top: 8rem;
+    }
   }
 
   .howitworks {
@@ -55,6 +63,10 @@ $skew: -15deg;
     
     i, h3, p {
       color: $dark-gray;
+    }
+
+    @include breakpoint(small down){
+      padding-bottom: 0;
     }
   }
 
@@ -82,6 +94,14 @@ $skew: -15deg;
     }
     p {
       margin-top: 2rem;
+    }
+
+    @include breakpoint(small down){
+      margin-top: 4rem;
+
+      .easytouse {
+        margin-bottom: 4rem;
+      }
     }
   }
 

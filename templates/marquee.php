@@ -61,7 +61,7 @@
         <!-- ^^Trusted Grid -->
 
       </div>
-      <div class="cell small-12 medium-4">
+      <div class="cell small-12 medium-4 hide-for-small-only">
         <div class="laptop"></div>
       </div>
     </div>

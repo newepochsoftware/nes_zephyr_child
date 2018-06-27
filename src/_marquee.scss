@@ -50,6 +50,11 @@ $skew: -15deg;
       background:   linear-gradient(to bottom, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
       background: -webkit-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
       box-shadow: 0px 10px 50px rgba(0,0,0,0.09);
+
+      @include breakpoint(small down){
+        top: 72rem;
+        height: 77rem;
+      }
     }
   }
 
@@ -70,6 +75,14 @@ $skew: -15deg;
         height: 70px;
         width: 210px;
       }
+
+      @include breakpoint(small down){
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include breakpoint(small down){
+      padding-top: 1rem;
     }
   }
 
@@ -122,6 +135,10 @@ $skew: -15deg;
         left: 1px;
       }
     }
+
+    @include breakpoint(small down){
+      text-align: center;
+    }
   }
 
   .trusted-grid {
@@ -139,6 +156,10 @@ $skew: -15deg;
       transform: translateY(-50%);
       padding: 0.5rem 2.5rem 0.5rem 0;
       max-height: 80px;
+
+      @include breakpoint(small down){
+        padding-right: 0.5rem;
+      }
     }
     .cell {
       text-align: center;
