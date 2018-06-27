@@ -86,5 +86,37 @@
         }
       }
     }
+    .browser {
+      position: absolute;
+      background-size: contain;
+      background-image: url('../img/svg/_browser_frame.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 700px;
+      height: 420px;
+      transform: rotate(15deg);
+      left: 5%;
+
+      &.left {
+        position: relative;
+        left: -150%;
+
+        @include breakpoint(small down){
+          left: 5%;
+          height: 300px;
+        }
+      }
+
+        @include breakpoint(small down){
+          width: 90%;
+        }
+      }
+
+      @include breakpoint(small down){
+        &.max5 {
+          height: 15rem;
+        }
+      }
+    }
   }
 }

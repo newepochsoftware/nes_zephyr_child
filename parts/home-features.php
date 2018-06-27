@@ -17,10 +17,10 @@
     </div>
 
     <div class="grid-x grid-margin-x feature-row">
-      <div class="cell small-12 small-order-2 medium-4">
+      <div class="cell small-12 small-order-2 medium-4 medium-order-1">
         <div class="laptop left"></div>
       </div>
-      <div class="cell small-12 small-order-1 medium-8">
+      <div class="cell small-12 small-order-1 medium-8 medium-order-2">
         <i class="fas fa-check-circle"></i>
         <h3>REGULATORY COMPLIANCE</h3>
         <p>As a Google Cloud-based application, Lead Verified offers unprecedented protection and compliance infrastructure to support TCPA, GDPR, and MiFID requirements. Archive leads for TCPA protection and as a backup to primary systems. Save leads with a data retention window ranging from 6 months to 4+ years. Store lead screen captures and videos for GDPR and MiFID compliance. Maintain proof of submission in the event of legal proceedings.</p>
@@ -39,10 +39,10 @@
     </div>
 
     <div class="grid-x grid-margin-x feature-row">
-      <div class="cell small-12 small-order-2 medium-4">
+      <div class="cell small-12 small-order-2 medium-4 medium-order-1">
         <div class="laptop left"></div>
       </div>
-      <div class="cell small-12 small-order-1 medium-8">
+      <div class="cell small-12 small-order-1 medium-8 medium-order-2">
         <i class="fas fa-check-circle"></i>
         <h3>LEAD SCORING</h3>
         <p>Lead Verified serves as a failover solution for lead posts, scores every lead using our proprietary grading system, and issues a certificate of authenticity for each lead. Use Lead Verified to ensure data integrity before leads enter your system and are routed to sales reps, partners, or lead buyers. Selectively post only the leads that meet your criteria.</p>
@@ -61,10 +61,10 @@
     </div>
 
     <div class="grid-x grid-margin-x feature-row">
-      <div class="cell small-12 small-order-2 medium-4">
+      <div class="cell small-12 small-order-2 medium-4 medium-order-1">
         <div class="laptop left"></div>
       </div>
-      <div class="cell small-12 small-order-1 medium-8">
+      <div class="cell small-12 small-order-1 medium-8 medium-order-2">
         <i class="fas fa-check-circle"></i>
         <h3>FRAUD PREVENTION</h3>
         <p>Lead Verified gives your customers – internal and external – the peace of mind they need to utilize real-time leads by the thousand. Extensible to any event, transaction, or visitor interaction, Lead Verified can verify and record engagement, and help prevent abuse and fraud.</p>
