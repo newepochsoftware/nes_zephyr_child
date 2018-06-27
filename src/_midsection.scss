@@ -117,6 +117,10 @@ $skew: -15deg;
       transform: translateX(-50%);
       mix-blend-mode: luminosity;
       opacity: 0.5;
+
+      @include breakpoint(small down){
+        top: -1.65rem;
+      }
     }
 
     .dfcontent {
