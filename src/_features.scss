@@ -49,7 +49,9 @@
         }
 
         @include breakpoint(small down){
+          left: 5%;
           width: 90%;
+          height: 300px;
         }
       }
       .laptop {
@@ -66,10 +68,21 @@
         &.left {
           position: relative;
           left: -150%;
+
+          @include breakpoint(small down){
+            left: 5%;
+            height: 300px;
+          }
         }
 
         @include breakpoint(small down){
           width: 90%;
+        }
+      }
+
+      @include breakpoint(small down){
+        &.max5 {
+          height: 15rem;
         }
       }
     }
