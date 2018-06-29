@@ -5,15 +5,40 @@ $skew: -15deg;
 
   .angle_1 {
     position: absolute;
+    overflow: hidden;
     z-index: 5;
     left: 50%;
     height: 70rem;
     width: 100%;
-    -webkit-transform: translateX(-50%) skewY($skew + 2.5);
-    transform: translateX(-50%) skewY($skew + 2.5);
+    -webkit-transform: translateX(-50%) skewY($skew);
+    transform: translateX(-50%) skewY($skew);
     -webkit-transform-origin: 0;
     transform-origin: 0;
     background: rgb(255,255,255);
+    background:    -moz-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+    background:   linear-gradient(to bottom, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.09);
+
+    .shape_1 {
+      display: inline-block;
+      position: relative;
+      top: -24rem;
+      width: 45%;
+      height: 16rem;
+      opacity: 0.5;
+      background: rgba(255,255,255, 1);
+      background:    -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background:   linear-gradient(to right,   rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      mix-blend-mode: soft-light;
+
+      &.pos_2 {
+        top: 43rem;
+        left: 6rem;
+        height: 40rem;
+      }
+    }
     /*
     background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
     background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
@@ -39,23 +64,20 @@ $skew: -15deg;
       background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
       background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
     }
-    */
+    
     &.offset_4 {
       z-index: 2;
       top: 77rem;
       transform: translateX(-50%) skewY($skew);
       -webkit-transform: translateX(-50%) skewY($skew);
       background: rgb(255,255,255);
-      background:    -moz-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
-      background:   linear-gradient(to bottom, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
-      background: -webkit-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
-      box-shadow: 0px 10px 50px rgba(0,0,0,0.09);
 
       @include breakpoint(small down){
         top: 72rem;
         height: 77rem;
       }
     }
+    */
   }
 
   .grid-container {
@@ -68,7 +90,7 @@ $skew: -15deg;
 
       .logo {
         position: relative;
-        background-image: url('../img/NES_LogoAlt.png');
+        background-image: url('../img/NES_LogoAlt_whiteKnockout.png');
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
@@ -96,43 +118,62 @@ $skew: -15deg;
     line-height: 2.5rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    color: $white;
   }
   p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.35rem;
     line-height: 2.25rem;
-    color: $black;
+    color: $white;
 
     .hilite {
       font-weight: 700;
-      color: $blue;
+      color: $orange;
     }
   }
 
   .request_demo {
     margin-top: 2rem;
+    position: relative;
 
     a {
       display: inline-block;
       position: relative;
-      border: 2px solid $blue;
-      border-radius: 25px;
+      overflow: hidden;
+      border-radius: 23px;
       padding: 10px 20px;
       height: 100%;
-      background-color: $blue;
+      background: $white;
       color: $white;
       font-size: 1.25rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       text-transform: uppercase;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+      box-shadow: 3px 4px 0px rgba(0,0,0,0.20);
+
+      span {
+        position: relative;
+        z-index: 10;
+      }
+
+      .orangeSlate {
+        background-color: $orange;
+        display: inline-block;
+        position: absolute;
+        z-index: 9;
+        left: 0;
+        top: 0;
+        height: 101%;
+        width: 101%;
+        transition: 250ms ease-in-out;
+      }
 
       &:hover {
-        background: none;
-        color: $blue;
-        box-shadow: none;
-        top: 1px;
-        left: 1px;
+        color: $orange;
+
+        .orangeSlate {
+          transform: translateX(100%);
+        }
       }
     }
 
@@ -142,19 +183,20 @@ $skew: -15deg;
   }
 
   .trusted-grid {
-    width: 75%;
-    opacity: 0.75;
+    width: 65%;
+    opacity: 0.55;
 
     h3 {
       font-size: 1.25rem;
       margin-top: 5rem;
       text-transform: uppercase;
+      color: $white;
     }
     img {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
-      padding: 0.5rem 2.5rem 0.5rem 0;
+      padding: 0.5rem 2.5rem 0.25rem 0;
       max-height: 80px;
 
       @include breakpoint(small down){
@@ -171,14 +213,20 @@ $skew: -15deg;
     }
   }
   
-  .laptop {
-    position: absolute;
-    background-size: contain;
-    background-image: url('../img/NES_Laptop.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 800px;
-    height: 510px;
-  }
+  .cell {
+    position: relative;
 
+    .tablet {
+      position: absolute;
+      background-size: contain;
+      background-image: url('../img/devices/marquee@2x.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 800px;
+      height: 510px;
+      left: 3rem;
+      transform: rotate($skew);
+      filter: drop-shadow(10px 15px 0px rgba(0,0,0,0.15));
+    }
+  }
 }

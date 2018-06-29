@@ -8,6 +8,15 @@
     <div class="grid-x grid-margin-x feature-row">
       <div class="cell small-12 medium-8 text-right">
         <i class="fas fa-check-circle"></i>
+        <!--
+        <div class="nes_icon">
+          <video width="72" height="72">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        -->
         <h3>LEAD INTELLIGENCE</h3>
         <p>Lead Verified records every interaction with your web site and provides heatmaps of visitor interactions so you can see which portions of your web site are getting engagement, and which portions may be overlooked. Use heatmaps for conversion rate optimization (CRO) and to ensure that disclaimers required for compliance are seen by your site visitors.</p>
       </div>
