@@ -52,7 +52,7 @@
               <img src="<?php echo $themePath; ?>/img/clients/AllPurposeLoans-Logo-white.png">
             </div>
           </div>
-          <div class="grid-x">
+          <div class="grid-x grid-margin-x">
             <div class="cell auto">
               <img src="<?php echo $themePath; ?>/img/clients/LasRageous-white.png">
             </div>
