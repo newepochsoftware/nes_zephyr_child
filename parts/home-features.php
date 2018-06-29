@@ -21,7 +21,7 @@
         <p>Lead Verified records every interaction with your web site and provides heatmaps of visitor interactions so you can see which portions of your web site are getting engagement, and which portions may be overlooked. Use heatmaps for conversion rate optimization (CRO) and to ensure that disclaimers required for compliance are seen by your site visitors.</p>
       </div>
       <div class="cell small-12 medium-4 max5">
-        <div class="tablet"></div>
+        <div class="tablet heatmap"></div>
       </div>
     </div>
 

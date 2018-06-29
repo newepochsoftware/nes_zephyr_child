@@ -38,10 +38,15 @@
         background-image: url('../img/svg/_tablet.svg');
         background-repeat: no-repeat;
         background-position: center center;
-        width: 550px;
-        height: 390px;
+        width: 640px;
+        height: 450px;
         transform: rotate(15deg);
         left: 15%;
+
+        &.heatmap {
+          background-image: url('../img/devices/heatmap@2x.png');
+          filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
+        }
 
         &.left {
           position: relative;

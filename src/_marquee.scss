@@ -37,6 +37,10 @@ $skew: -15deg;
         top: 43rem;
         left: 6rem;
         height: 40rem;
+        
+        @include breakpoint(small down){
+          left: -14rem;
+        }
       }
     }
     /*
