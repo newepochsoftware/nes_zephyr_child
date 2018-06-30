@@ -1,7 +1,7 @@
 .features {
   position: relative;
   z-index: 5;
-  margin-top: -30rem;
+  margin-top: -15rem;
   margin-bottom: 5rem;
 
   i {
@@ -31,6 +31,7 @@
 
     .cell {
       position: relative;
+      padding: 0 .9375rem;
 
       .tablet {
         position: absolute;
@@ -109,6 +110,10 @@
         @include breakpoint(small down){
           width: 90%;
         }
+      }
+
+      .straight {
+        transform: rotate(0deg);
       }
 
       @include breakpoint(small down){

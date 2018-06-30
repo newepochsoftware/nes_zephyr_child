@@ -43,45 +43,6 @@ $skew: -15deg;
         }
       }
     }
-    /*
-    background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
-    background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(210,210,210,1) 100%);
-  
-    &.offset_2 {
-      z-index: 4;
-      top: 4rem;
-      transform: translateX(-50%) skewY($skew + 1.25);
-      -webkit-transform: translateX(-50%) skewY($skew + 1.25);
-      background: rgb(255,255,255);
-      background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%);
-      background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%);
-      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 100%);
-    }
-    &.offset_3 {
-      z-index: 3;
-      top: 8rem;
-      transform: translateX(-50%) skewY($skew);
-      -webkit-transform: translateX(-50%) skewY($skew);
-      background: rgb(255,255,255);
-      background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
-      background:   linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
-      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
-    }
-    
-    &.offset_4 {
-      z-index: 2;
-      top: 77rem;
-      transform: translateX(-50%) skewY($skew);
-      -webkit-transform: translateX(-50%) skewY($skew);
-      background: rgb(255,255,255);
-
-      @include breakpoint(small down){
-        top: 72rem;
-        height: 77rem;
-      }
-    }
-    */
   }
 
   .grid-container {

@@ -7,20 +7,39 @@
 
   <!-- How It Works Section -->
   <div class="grid-container howitworks">
-    <div class="grid-x grid-margin-x">
+    <div class="grid-x">
       <div class="cell small-12 text-center">
         <i class="fas fa-check-circle"></i>
         <h3>HOW IT WORKS</h3>
         <p>Lead Verified creates a snapshot and video of every form fill or specified event. We zip the site page as seen by the visitor along with user-generated content, location, IP, hardware and session parameters. Each lead is then saved with a unique token to the Google Drive or FTP location you specify.</p>
       </div>
     </div>
+
+    <!-- Google Block -->
+    <div class="grid-x google-block">
+      <div class="cell small-12 text-center">
+        <h3>We are a google premier partner</h3>
+      </div>
+      <div class="cell small-12 medium-6 small-order-2 medium-order-1">
+        <ul>
+          <li><i class="fas fa-check-circle"></i> We follow Google's best practices</li>
+          <li><i class="fas fa-check-circle"></i> We are Google Ads certified</li>
+          <li><i class="fas fa-check-circle"></i> We manage high-value ad spends</li>
+          <li><i class="fas fa-check-circle"></i> We help businesses succeed online</li>
+        </ul>
+      </div>
+      <div class="cell small-12 medium-6 small-order-1 medium-order-2">
+        
+      </div>
+    </div>
+    <!-- Google Block -->
   </div>
   <!-- How It Works Section -->
 
   <!-- Easy/Developer Sections -->
   <div class="easy-dev">
     <div class="grid-container">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x">
   
         <div class="cell small-12 medium-6 easytouse">
           <div><i class="fas fa-check-circle"></i> <h3>Easy to use</h3></div>
@@ -66,7 +85,7 @@
       }
     </css-doodle>
     <div class="grid-container dfcontent">
-      <div class="grid-x grid-margin-x">
+      <div class="grid-x">
         <div class="cell small-12 text-center">
           <h4>A digital fingerprint for your leads and user-generated content</h4>
           <i class="fas fa-check-circle"></i>

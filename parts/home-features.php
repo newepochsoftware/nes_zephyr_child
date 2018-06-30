@@ -5,7 +5,7 @@
 <div class="features">
   <div class="grid-container">
     
-    <div class="grid-x grid-margin-x feature-row">
+    <div class="grid-x feature-row">
       <div class="cell small-12 medium-8 text-right">
         <i class="fas fa-check-circle"></i>
         <!--
@@ -21,13 +21,13 @@
         <p>Lead Verified records every interaction with your web site and provides heatmaps of visitor interactions so you can see which portions of your web site are getting engagement, and which portions may be overlooked. Use heatmaps for conversion rate optimization (CRO) and to ensure that disclaimers required for compliance are seen by your site visitors.</p>
       </div>
       <div class="cell small-12 medium-4 max5">
-        <div class="tablet heatmap"></div>
+        <div class="tablet straight heatmap"></div>
       </div>
     </div>
 
-    <div class="grid-x grid-margin-x feature-row">
+    <div class="grid-x feature-row">
       <div class="cell small-12 small-order-2 medium-4 medium-order-1">
-        <div class="laptop left"></div>
+        <div class="laptop straight left"></div>
       </div>
       <div class="cell small-12 small-order-1 medium-8 medium-order-2">
         <i class="fas fa-check-circle"></i>
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="grid-x grid-margin-x feature-row">
+    <div class="grid-x feature-row">
       <div class="cell small-12 medium-8 text-right">
         <i class="fas fa-check-circle"></i>
         <h3>PROOF OF SUBMISSION</h3>
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="grid-x grid-margin-x feature-row">
+    <div class="grid-x feature-row">
       <div class="cell small-12 small-order-2 medium-4 medium-order-1">
         <div class="laptop left"></div>
       </div>
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="grid-x grid-margin-x feature-row">
+    <div class="grid-x feature-row">
       <div class="cell small-12 medium-8 text-right">
         <i class="fas fa-check-circle"></i>
         <h3>DATA WAREHOUSING</h3>
@@ -69,7 +69,7 @@
       </div>
     </div>
 
-    <div class="grid-x grid-margin-x feature-row">
+    <div class="grid-x feature-row">
       <div class="cell small-12 small-order-2 medium-4 medium-order-1">
         <div class="laptop left"></div>
       </div>
