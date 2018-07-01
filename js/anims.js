@@ -1,3 +1,9 @@
+(function($){
+  console.log("Custom jQuery Loaded.");
+
+})(jQuery);
+
+/*
 {
   const programmingLanguages = document.getElementById("programming-languages");
 
@@ -68,3 +74,4 @@
 
   interval(pipe(getRandomLanguage, createIcon, animateIcon), 500);
 }
+*/

@@ -99,6 +99,10 @@ $skew: -15deg;
           font-size: 1.35rem;
         }
       }
+
+      @include breakpoint(small down){
+        margin: 0 0.9375rem;
+      }
     }
   }
 
@@ -154,24 +158,83 @@ $skew: -15deg;
 
   .fingerprint {
     position: relative;
-    margin-bottom: 30rem;
+    margin-bottom: 20rem;
     
-    css-doodle {
+    .spinner {
       position: absolute;
-      left: 50%;
-      top: -3.95rem;
       transform: translateX(-50%);
-      mix-blend-mode: luminosity;
-      opacity: 0.5;
+      width: 500px;
+      height: 500px;
+      top: -142px;
+      left: 50%;
+      z-index: 1;
+      opacity: 0.35;
+      mix-blend-mode: overlay;
+         
+      @keyframes rotate {
+          0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      $multiplier: 540;
+      $subtractor: 40;
+      $borderFactor: 80;
+      @for $i from 1 through 6 {
+          
+        .circle-#{$i} {
+          position: absolute;
+          background: none;
+
+          width: ($multiplier - $subtractor)+px;
+          height: ($multiplier - $subtractor)+px;
+
+          left: ($i - 1)*$subtractor+px;
+          top: ($i - 1)*$subtractor+px;
+
+          border-radius: 50%;
+
+          animation: $i*10s linear rotate infinite;
+          &:nth-child(odd) {
+            animation-direction: reverse;
+          }
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 12px;
+            left: calc(50% - 5px);
+          }
+
+          $multiplier: $multiplier - $subtractor;
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: ($multiplier - $subtractor)+px;
+            height: ($multiplier - $subtractor)+px;
+            left: ($subtractor * 0.5)+px;
+            top: ($subtractor * 0.5)+px;
+            border-radius: 50%;
+            border-width: ($borderFactor)+px;
+            border-style: dashed;
+            border-color: rgba(255,255,255,0.5);
+          }
+        }
+        $borderFactor: $borderFactor * 0.75;
+        $multiplier: $multiplier - $subtractor;
+      }
 
       @include breakpoint(small down){
-        top: -1.65rem;
+        top: -71px;
       }
     }
 
     .dfcontent {
       position: relative;
       width: 100%;
+      z-index: 5;
 
       i, h4 {
         color: $white;
@@ -201,7 +264,7 @@ $skew: -15deg;
       z-index: 0;
       top: -20rem;
       transform: skewY(10deg);
-      height: 55rem;
+      height: 50rem;
       width: 100%;
       background: rgb(205,205,205);
       background:    -moz-linear-gradient(top, rgba(27,168,236,1) 0%, rgba(123,101,250,1) 100%);
@@ -209,6 +272,14 @@ $skew: -15deg;
       background: -webkit-linear-gradient(top, rgba(27,168,236,1) 0%, rgba(123,101,250,1) 100%);
       box-shadow: 0px 10px 50px rgba(0,0,0,0.15);
       overflow: hidden;
+
+      @include breakpoint(small down){
+        top: -8rem;
+      }
+    }
+
+    @include breakpoint(small down){
+      margin-bottom: 12rem;
     }
   }
 }

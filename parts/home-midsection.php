@@ -22,8 +22,10 @@
         </ul>
       </div>
       <div class="cell small-12 medium-6 small-order-1 medium-order-2">
+        <!--
         <script src=“https://apis.google.com/js/platform.js” async defer></script>
         <div class=“g-partnersbadge” data-agency-id=“9915561239”></div>
+        -->
       </div>
     </div>
     <!-- Google Block -->
@@ -58,34 +60,14 @@
 
   <!-- Digital Fingerprint -->
   <div class="fingerprint">
-    <!--
-    <css-doodle>
-      :doodle { 
-        @grid: 1x10 / 62rem; 
-      }
-
-      @place-cell: center; 
-      @size: calc(@index() * 7%);
-      
-      border-radius: 50%;
-      border-style: dashed;
-      border-width: calc(@index() * 0.75rem); 
-      border-color: hsla(
-        calc(20 * @index()), 70%, 68%, 
-        calc(3 / @index() * .8)
-      );
-      
-      --d: @rand(20s, 40s); 
-      --rf: @rand(360deg);
-      --rt: calc(var(--rf) + @pick(1turn, -1turn));
-
-      animation: spin var(--d) linear infinite;
-      @keyframes spin {
-        from { transform: rotate(var(--rf)) }
-        to   { transform: rotate(var(--rt)) }
-      }
-    </css-doodle>
-    -->
+    <div class="spinner" id="spinner">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="circle-3"></div>
+      <div class="circle-4"></div>
+      <div class="circle-5"></div>
+      <div class="circle-6"></div>
+    </div>
     <div class="grid-container dfcontent">
       <div class="grid-x">
         <div class="cell small-12 text-center">

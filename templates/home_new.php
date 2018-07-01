@@ -16,6 +16,6 @@ get_header('2018'); ?>
 
 <?php get_template_part( 'parts/home', 'pricingopts' ); ?>
 
-<?php //get_template_part( 'parts/home', 'formblock' ); ?>
+<?php get_template_part( 'parts/home', 'formblock' ); ?>
 
 <?php get_footer(); ?>

@@ -3,45 +3,74 @@ $nusku: -7deg;
 .options {
   position: relative;
 
-  .angle_5 {
+  .angle_6 {
     position: absolute;
     overflow: hidden;
     z-index: 5;
     left: 50%;
-    height: 70rem;
+    top: 27rem;
+    height: 42rem;
     width: 100%;
     -webkit-transform: translateX(-50%) skewY($nusku);
     transform: translateX(-50%) skewY($nusku);
     -webkit-transform-origin: 0;
     transform-origin: 0;
     background: rgb(245,245,245);
-    background: rgb(200,20,245);
+
+    @include breakpoint(small down){
+      background-color: $light-gray;
+      top: 15rem;
+      height: 140rem;
+    }
+  }
+
+  .pricingInfo {
+    margin: 5rem 0;
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      margin: 0 0 1rem;
+    } 
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.35rem;
+
+      @include breakpoint(small down){
+        br {
+          display: none;
+        }
+      }
+    }
+    
+    @include breakpoint(small down){
+      margin: 0rem auto;
+    }
   }
 
   .pricingOptions {
     position: relative;
     z-index: 20;
-    padding-top: 2.5rem; 
     padding-bottom: 2.5rem;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
 
     .slideMe {
       position: relative;
+      top: 10rem;
 
-      .xell {
-        padding-bottom: 15px;
+      .cell {
         position: relative;
         background-color: $white;
-        width: calc(25% - 1.5rem);
         display: inline-block;
-        margin: 0 0.25rem;
         border-radius: 6px;
+        filter: drop-shadow(6px 7px 0 rgba(0,0,0,0.05));
+        margin: 2rem auto;
 
         h4 {
           text-align: center;
           font-weight: 700;
           font-size: 2.5rem;
-          margin: 1rem 0;
+          margin: 1rem 0 0;
           line-height: 2rem;
           color: $black; 
           font-family: 'Montserrat', sans-serif;;
@@ -59,91 +88,87 @@ $nusku: -7deg;
         p {
           text-align: center;
           display: inline-block;
+          font-size: 12px;
           width: 100%; 
+
+          &.customPricing {
+            font-size: 1.15rem;
+            margin: 1.5rem 0 2rem;
+          }
         }
         ul {
-          margin: 20px 0 0 0;
+          margin: 1rem 0 2rem;
           
           li {
             list-style: none;
             text-align: center;
-            padding: 10px 0;
+            padding: 0;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 13px;
             color: $black;
           }
         }
 
         &:first-child {
-          margin-left: 0;
+          margin-left: -1rem;
         }
         &:last-child {
-          margin-right: 0;
-
-          .callbox {
-            padding: 16px 0 12px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            line-height: 3rem; 
-          }
+          margin-right: -1rem;
         }
-      }
-      .xell.popular {
-        background: rgb(27,206,249);
-        background: -webkit-linear-gradient(-45deg, rgba(27,206,249,1) 0%, rgba(27,139,249,1) 100%);
-        background: -moz-linear-gradient(-45deg, rgba(27,206,249,1) 0%, rgba(27,139,249,1) 100%);
-        background: linear-gradient(135deg, rgba(27,206,249,1) 0%, rgba(27,139,249,1) 100%);
-        color: $white;
-        
-        h4, h5 {
+
+        &.popular {
+          background: rgb(27,206,249);
+          background: -webkit-linear-gradient(-45deg, rgba(27,206,249,1) 0%, rgba(27,139,249,1) 100%);
+          background: -moz-linear-gradient(-45deg, rgba(27,206,249,1) 0%, rgba(27,139,249,1) 100%);
+          background: linear-gradient(135deg, rgba(27,206,249,1) 0%, rgba(27,139,249,1) 100%);
           color: $white;
-        }
-
-        ul {
-          margin: 20px 0 0 0; 
-
-          li {
+          margin: 0 auto;
+          
+          h4, h5 {
             color: $white;
+          }
+          h4 {
+            margin-top: 2rem;
+          }
+  
+          ul {
+            margin: 1.5rem 0 2rem; 
+  
+            li {
+              color: $white;
+            }
           }
         }
       }
     }
   }
 
-  @media screen and (max-width: 39.9375em) {
+  @include breakpoint(small down){
     .pricingOptions {
       padding-top: 0;
-      margin: 0 -0.625rem 0;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
 
       .slideMe {
-        width: 200%;
-        padding: 25px 10px;
+        padding: 0 1rem;
+        top: 5rem;
 
-        .xell {
-          margin-bottom: 25px;
-          width: 33.33%;
-
+        .cell {
+          margin: 2rem auto;
+          
           ul {
             
             li {
-              font-size: 0.825rem; 
+              font-size: 1rem; 
             }
           }
           
-          &:last-child {
-            display: none; 
-          } 
-          &:nth-child(3) {
-            border-radius: 0 6px 6px 0;
-            border-right: 1px solid #cacaca; 
-
-            h5 {
-              border-radius: 0 6px 0 0; 
-            }
+          &:first-child {
+            margin: auto;
+            margin-bottom: 2rem;
           }
+          &:last-child {
+            margin: auto;
+            margin-bottom: 2rem;
+          } 
         } 
       } 
     } 

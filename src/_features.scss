@@ -24,10 +24,34 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.35rem;
     color: $dark-gray;
+
+    @include breakpoint(small down){
+      font-size: 1.25rem;
+      line-height: 1.8rem;
+    }
   }
 
   .feature-row {
     margin: 8rem auto;
+
+    &:nth-child(even):before {
+      content: '';
+      position: absolute;
+      overflow: hidden;
+      z-index: 0;
+      left: 50%;
+      height: 40rem;
+      width: 100%;
+      -webkit-transform: translateX(-50%) skewY($nusku);
+      transform: translateX(-50%) skewY($nusku);
+      -webkit-transform-origin: 0;
+      transform-origin: 0;
+      background: rgb(250,250,250);
+
+      @include breakpoint(small down){
+        height: 50rem;
+      }
+    }
 
     .cell {
       position: relative;
@@ -43,6 +67,7 @@
         height: 450px;
         transform: rotate(15deg);
         left: 15%;
+        z-index: 10;
 
         &.heatmap {
           background-image: url('../img/devices/heatmap@2x.png');
@@ -72,11 +97,16 @@
         &.left {
           position: relative;
           left: -150%;
+
+          @include breakpoint(small down){
+            left: initial;
+            width: 100%;
+          }
         }
 
         @include breakpoint(small down){
-          left: 5%;
-          width: 90%;
+          left: initial;
+          width: 100%;
           height: 300px;
         }
       }
@@ -91,12 +121,6 @@
 
       .straight {
         transform: rotate(0deg);
-      }
-
-      @include breakpoint(small down){
-        &.max5 {
-          height: 15rem;
-        }
       }
     }
   }

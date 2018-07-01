@@ -21,6 +21,7 @@ gulp.task('browserSync', function() {
   
 gulp.task('watch', ['browserSync', 'sass'], function () {
     gulp.watch('src/*.scss', ['sass']);
+    gulp.watch('js/*.js', browserSync.reload);
     gulp.watch('templates/*.php', browserSync.reload);
     gulp.watch('parts/*.php', browserSync.reload);
     gulp.watch('header-2018.php', browserSync.reload);

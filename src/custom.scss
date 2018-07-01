@@ -29,7 +29,19 @@ body {
 
 .l-footer {
     .color_footer-bottom {
-        background-color: $black !important;
+        background-color: $blue !important;
+        a {
+            color: $white;
+            text-transform: uppercase;
+            padding: 3px 1rem;
+        }
+    }
+    .l-section.height_small>.l-section-h {
+        color: $white;
+        padding: 1rem 0;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 }
 
