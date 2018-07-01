@@ -1,7 +1,7 @@
 .features {
   position: relative;
   z-index: 5;
-  margin-top: -15rem;
+  /*margin-top: -15rem;*/
   margin-bottom: 5rem;
 
   i {
@@ -27,14 +27,14 @@
   }
 
   .feature-row {
-    margin: 10rem auto;
+    margin: 8rem auto;
 
     .cell {
       position: relative;
       padding: 0 .9375rem;
 
       .tablet {
-        position: absolute;
+        position: relative;
         background-size: contain;
         background-image: url('../img/svg/_tablet.svg');
         background-repeat: no-repeat;

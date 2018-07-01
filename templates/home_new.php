@@ -6,8 +6,6 @@
 
 get_header('2018'); ?>
 
-<?php //get_template_part( 'parts/home', 'formblock' ); ?>
-
 <?php get_template_part( 'parts/home', 'midsection' ); ?>
 
 <?php get_template_part( 'parts/home', 'features' ); ?>
@@ -17,5 +15,7 @@ get_header('2018'); ?>
 <!-- Labyrinth ("Digital Fingerprint" icon) by Daouna Jeong from the Noun Project -->
 
 <?php get_template_part( 'parts/home', 'pricingopts' ); ?>
+
+<?php //get_template_part( 'parts/home', 'formblock' ); ?>
 
 <?php get_footer(); ?>
