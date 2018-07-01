@@ -68,6 +68,13 @@ $skew: -15deg;
       padding: 0 2rem;
       text-shadow: 2px 2px 0px rgba(255,255,255,1);
     }
+    .icon {
+      height: 70px;
+
+      path, polygon {
+        fill: $dark-gray;
+      }
+    }
 
     @include breakpoint(small down){
       padding-bottom: 0;
@@ -172,6 +179,15 @@ $skew: -15deg;
       h4 {
         font-size: 1.35rem;
         margin: 1rem auto;
+      }
+
+      .icon {
+        height: 70px;
+        margin-top: 5px;
+
+        path, polygon {
+          fill: $white;
+        }
       }
     }
 

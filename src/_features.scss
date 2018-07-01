@@ -48,6 +48,26 @@
           background-image: url('../img/devices/heatmap@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
+        &.compliance {
+          background-image: url('../img/devices/marquee@2x.png');
+          filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
+        }
+        &.capture {
+          background-image: url('../img/devices/capture@2x.png');
+          filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
+        }
+        &.score {
+          background-image: url('../img/devices/score@2x.png');
+          filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
+        }
+        &.data {
+          background-image: url('../img/devices/storage@2x.png');
+          filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
+        }
+        &.reports {
+          background-image: url('../img/devices/reports@2x.png');
+          filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
+        }
 
         &.left {
           position: relative;
@@ -60,55 +80,12 @@
           height: 300px;
         }
       }
-      .laptop {
-        position: absolute;
-        background-size: contain;
-        background-image: url('../img/svg/_laptop.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 700px;
-        height: 420px;
-        transform: rotate(15deg);
-        left: 5%;
+      
+      .icon {
+        height: 70px;
 
-        &.left {
-          position: relative;
-          left: -150%;
-
-          @include breakpoint(small down){
-            left: 5%;
-            height: 300px;
-          }
-        }
-
-        @include breakpoint(small down){
-          width: 90%;
-        }
-      }
-
-      .browser {
-        position: absolute;
-        background-size: contain;
-        background-image: url('../img/svg/_browser_frame.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 700px;
-        height: 420px;
-        transform: rotate(15deg);
-        left: 5%;
-
-        &.left {
-          position: relative;
-          left: -150%;
-
-          @include breakpoint(small down){
-            left: 5%;
-            height: 300px;
-          }
-        }
-
-        @include breakpoint(small down){
-          width: 90%;
+        path, polygon {
+          fill: $dark-gray;
         }
       }
 
