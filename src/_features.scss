@@ -46,7 +46,7 @@
       transform: translateX(-50%) skewY($nusku);
       -webkit-transform-origin: 0;
       transform-origin: 0;
-      background: rgb(250,250,250);
+      background: rgb(245,245,245);
 
       @include breakpoint(small down){
         height: 50rem;
