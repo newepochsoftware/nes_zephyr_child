@@ -29,7 +29,7 @@ $themePath = get_stylesheet_directory_uri();
             <div class="g-partnersbadge" data-agency-id="9915561239"></div>
           </div>
           <div class="cell small-6">
-            <img class="googleads" src="<?php echo $themePath; ?>/img/google/GoogleSearch.png">
+            <img class="googlesearch" src="<?php echo $themePath; ?>/img/google/GoogleSearch.png">
           </div>
         </div>
         <div class="grid-x google-grid">
