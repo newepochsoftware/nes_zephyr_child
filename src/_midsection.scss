@@ -105,6 +105,10 @@ $skew: -15deg;
         i {
           color: $green;
           font-size: 1.35rem;
+
+          @include breakpoint(small down){
+            font-size: 1.15rem;
+          }
         }
 
         @include breakpoint(small down){
