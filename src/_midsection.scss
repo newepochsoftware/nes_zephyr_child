@@ -80,13 +80,13 @@ $skew: -15deg;
   }
 
   .google-block {
-    margin-top: 1rem;
+    margin-top: 0rem;
 
     .cell {
       padding: 0 .9375rem;
     }
     h3 {
-      margin: 0 0 5rem;
+      margin: 2rem 0 4rem;
 
       @include breakpoint(small down){
         font-size: 2rem;
