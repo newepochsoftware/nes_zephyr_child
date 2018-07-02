@@ -128,6 +128,13 @@ $skew: -15deg;
       opacity: 0.5;
       top: 0;
       right: 0;
+
+      @include breakpoint(small down){
+        width: 100%;
+        height: 50%;
+        top: 550px;
+        background-size: cover;
+      }
     }
 
     i, h3, p {
