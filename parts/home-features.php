@@ -5,6 +5,7 @@ $themePath = get_stylesheet_directory_uri();
 ?>
 
 <div class="features">
+  <div class="molecules2"></div>
   <div class="grid-container">
     
     <div class="grid-x feature-row">

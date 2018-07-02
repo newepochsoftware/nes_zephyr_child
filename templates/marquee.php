@@ -40,7 +40,7 @@
         
         <!-- Trusted Grid -->
         <div class="trusted-grid">
-          <h3>Trusted by:</h3>
+          <h3>Our Clients</h3>
           <div class="grid-x grid-margin-x">
             <div class="cell auto">
               <img src="<?php echo $themePath; ?>/img/clients/LiveNation-Logo-white.png">

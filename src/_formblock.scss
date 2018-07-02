@@ -10,7 +10,7 @@ $nusku: -7deg;
     overflow: hidden;
     z-index: 5;
     left: 50%;
-    height: 70rem;
+    height: 80rem;
     width: 100%;
     -webkit-transform: translateX(-50%) skewY($nusku);
     transform: translateX(-50%) skewY($nusku);
@@ -20,6 +20,18 @@ $nusku: -7deg;
     background:    -moz-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
     background:   linear-gradient(to bottom, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
     background: -webkit-linear-gradient(top, rgba(123,101,250,1) 0%, rgba(27,168,236,1) 100%);
+
+    .molecules {
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/NES_molecules.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top left;
+      transform: skew(7deg);
+      opacity: .25;
+      mix-blend-mode: multiply;
+    }
   }
 
   @include breakpoint(small down){
@@ -91,6 +103,7 @@ $nusku: -7deg;
               color: $dark-gray !important;
               padding: 1rem;
               border: none;
+              border-radius: 6px;
             }
           }
         }
@@ -98,17 +111,21 @@ $nusku: -7deg;
 
       @include breakpoint(small down){
         margin-top: 4rem;
+        margin-bottom: 4rem;
       }
 
       .lv-form-1 {
         .gform_footer {
+          text-align: center;
+
           input[type=submit] {
             background-color: $orange;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             border-radius: 3rem;
-            padding: 1rem 3rem;
-            font-size: 1.25rem;
+            padding: 0.5rem 3rem;
+            font-size: 1.2rem;
+            box-shadow: 3px 4px 0px rgba(0,0,0,0.20);
           }
         }
       }

@@ -111,10 +111,24 @@ $skew: -15deg;
     z-index: 9;
     padding: 6rem 0;
     margin: 8rem auto 4rem;
+    overflow: hidden;
     background: $orange;
     background:    -moz-linear-gradient(top, rgba(214,89,62,1) 0%, rgba(248,143,65,1) 100%);
     background:   linear-gradient(to bottom, rgba(214,89,62,1) 0%, rgba(248,143,65,1) 100%);
     background: -webkit-linear-gradient(top, rgba(214,89,62,1) 0%, rgba(248,143,65,1) 100%);
+
+    .honeycomb {
+      position: absolute;
+      background: url('../img/NES_honeycomb@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 70%;
+      height: 100%;
+      mix-blend-mode: soft-light;
+      opacity: 0.5;
+      top: 0;
+      right: 0;
+    }
 
     i, h3, p {
       color: $white;

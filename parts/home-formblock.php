@@ -4,7 +4,9 @@
 
 <!-- Form Row -->
 <div class="form-block">
-  <div class="angle_10"></div>
+  <div class="angle_10">
+    <div class="molecules alt"></div>
+  </div>
 
   <div class="grid-container mainform">
     

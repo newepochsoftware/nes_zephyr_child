@@ -31,10 +31,12 @@ $nusku: -7deg;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       margin: 0 0 1rem;
+      color: $dark-gray;
     } 
     p {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.35rem;
+      color: $dark-gray;
 
       @include breakpoint(small down){
         br {
@@ -72,11 +74,11 @@ $nusku: -7deg;
           font-size: 2.5rem;
           margin: 1rem 0 0;
           line-height: 2rem;
-          color: $black; 
+          color: $dark-gray; 
           font-family: 'Montserrat', sans-serif;;
         }
         h5 {
-          color: $black;
+          color: $dark-gray;
           text-align: center;
           font-size: 1.5rem;
           letter-spacing: 1px;
@@ -105,7 +107,7 @@ $nusku: -7deg;
             padding: 0;
             font-weight: 700;
             font-size: 13px;
-            color: $black;
+            color: $dark-gray;
           }
         }
 

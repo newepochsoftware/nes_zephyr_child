@@ -34,6 +34,7 @@
 
   <!-- Easy/Developer Sections -->
   <div class="easy-dev">
+    <div class="honeycomb"></div>
     <div class="grid-container">
       <div class="grid-x">
   

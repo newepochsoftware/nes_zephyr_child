@@ -4,6 +4,20 @@
   /*margin-top: -15rem;*/
   margin-bottom: 5rem;
 
+  .molecules2 {
+    position: absolute;
+    background-image: url('../img/NES_molecules2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 65rem;
+    height: 65rem;
+    left: -25rem;
+    bottom: 21rem;
+    z-index: 20;
+    opacity: 0.5;
+  }
+
   i {
     font-size: 5rem;
     color: $dark-gray;
@@ -114,7 +128,7 @@
       .icon {
         height: 70px;
 
-        path, polygon {
+        path, polygon, ellipse {
           fill: $dark-gray;
         }
       }
