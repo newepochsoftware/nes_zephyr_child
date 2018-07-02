@@ -29,11 +29,11 @@ $themePath = get_stylesheet_directory_uri();
             <div class="g-partnersbadge" data-agency-id="9915561239"></div>
           </div>
           <div class="cell small-6">
-            <img class="googleads" src="<?php echo $themePath; ?>/img/google/GoogleAds.png">
+            <img class="googleads" src="<?php echo $themePath; ?>/img/google/GoogleSearch.png">
           </div>
         </div>
         <div class="grid-x google-grid">
-          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Adwords.svg" title="Adwords"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/searchwords.svg" title="Adwords"></div>
           <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Display.svg" title="Display"></div>
           <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Mobile.svg" title="Mobile"></div>
           <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/ShoppingCampaigns.png" title="Shopping Campaigns"></div>
