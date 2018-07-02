@@ -153,9 +153,10 @@ $skew: -15deg;
     opacity: 0.55;
 
     h3 {
-      font-size: 1.15rem;
-      margin-top: 5rem;
+      font-size: 1rem;
+      margin-top: 3rem;
       text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255, 0.5);
       color: $white;
     }
     img {
@@ -163,11 +164,14 @@ $skew: -15deg;
       top: 50%;
       transform: translateY(-50%);
       padding: 0.5rem 1.5rem 0.25rem 0;
-      max-height: 80px;
+      max-height: 60px;
 
       @include breakpoint(small down){
         padding-right: 0.5rem;
       }
+    }
+    .grid-x {
+      margin-bottom: 10px;
     }
     .cell {
       text-align: center;

@@ -26,7 +26,7 @@ $skew: -15deg;
   .angle_2 {
     position: absolute;
     z-index: 1;
-    top: 13rem;
+    top: 0rem;
     left: 50%;
     height: 44rem;
     width: 100%;
@@ -35,9 +35,9 @@ $skew: -15deg;
     -webkit-transform-origin: 0;
     transform-origin: 0;
     background: rgb(205,205,205);
-    background:    -moz-linear-gradient(top, rgba(215,215,215,1) 0%, rgba(255,255,255,1) 100%);
-    background:   linear-gradient(to bottom, rgba(215,215,215,1) 0%, rgba(255,255,255,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(215,215,215,1) 0%, rgba(255,255,255,1) 100%);
+    background:    -moz-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(215,215,215,1) 100%);
+    background:   linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(215,215,215,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(215,215,215,1) 100%);
 
     .molecules {
       width: 100%;
@@ -82,8 +82,11 @@ $skew: -15deg;
   .google-block {
     margin-top: 4rem;
 
+    .cell {
+      padding: 0 .9375rem;
+    }
     h3 {
-      margin-bottom: 2rem;
+      margin: 0 0 5rem;
     }
 
     ul {
@@ -92,7 +95,8 @@ $skew: -15deg;
       li {
         list-style-type: none;
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.35rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
 
         i {
           color: $green;
@@ -104,13 +108,27 @@ $skew: -15deg;
         margin: 0 0.9375rem;
       }
     }
+
+    .google-grid {
+      color: $dark-gray;
+      margin-bottom: 12px;
+      .small-2 {
+        text-align: center;
+      }
+      .googleads {
+        padding: 22px 0;
+      }
+      .googleicons {
+        max-height: 50px;
+      }
+    }
   }
 
   .easy-dev {
     position: relative;
     z-index: 9;
     padding: 6rem 0;
-    margin: 8rem auto 4rem;
+    margin: 6rem auto 4rem;
     overflow: hidden;
     background: $orange;
     background:    -moz-linear-gradient(top, rgba(214,89,62,1) 0%, rgba(248,143,65,1) 100%);
@@ -179,7 +197,7 @@ $skew: -15deg;
 
   .fingerprint {
     position: relative;
-    margin-bottom: 20rem;
+    margin-bottom: 22rem;
     
     .spinner {
       position: absolute;

@@ -1,3 +1,13 @@
+tippy('.tipped', {
+  delay: 100,
+  arrow: true,
+  arrowType: 'round',
+  size: 'large',
+  duration: 500,
+  placement: 'bottom',
+  animation: 'shift-toward'
+});
+
 (function($){
   console.log("Custom jQuery Loaded.");
 

@@ -1,5 +1,6 @@
 <?php
 
+$themePath = get_stylesheet_directory_uri();
 ?>
 
 <div class="midsection">
@@ -22,10 +23,31 @@
         </ul>
       </div>
       <div class="cell small-12 medium-6 small-order-1 medium-order-2">
-        <!--
-        <script src=“https://apis.google.com/js/platform.js” async defer></script>
-        <div class=“g-partnersbadge” data-agency-id=“9915561239”></div>
-        -->
+        <div class="grid-x google-grid">
+          <div class="cell small-6">
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
+            <div class="g-partnersbadge" data-agency-id="9915561239"></div>
+          </div>
+          <div class="cell small-6">
+            <img class="googleads" src="<?php echo $themePath; ?>/img/google/GoogleAds.png">
+          </div>
+        </div>
+        <div class="grid-x google-grid">
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Adwords.svg" title="Adwords"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Display.svg" title="Display"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Mobile.svg" title="Mobile"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/ShoppingCampaigns.png" title="Shopping Campaigns"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/analytics_2x.png" title="Analytics"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/tagmanager_2x.png" title="Tag Manager"></div>
+        </div>
+        <div class="grid-x google-grid">
+          <div class="cell small-2"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/CloudPlatform.png" title="Cloud Platform"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/SearchConsole.png" title="Search Console"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/MyBusiness.png" title="My Business"></div>
+          <div class="cell small-2"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/YouTube.png" title="YouTube"></div>
+          <div class="cell small-2"></div>
+        </div>
       </div>
     </div>
     <!-- Google Block -->
