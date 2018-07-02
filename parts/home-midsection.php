@@ -24,11 +24,11 @@ $themePath = get_stylesheet_directory_uri();
       </div>
       <div class="cell small-12 medium-6 small-order-1 medium-order-2">
         <div class="grid-x google-grid">
-          <div class="cell small-6">
+          <div class="cell small-12 medium-6">
             <script src="https://apis.google.com/js/platform.js" async defer></script>
             <div class="g-partnersbadge" data-agency-id="9915561239"></div>
           </div>
-          <div class="cell small-6">
+          <div class="cell small-12 medium-6">
             <img class="googlesearch" src="<?php echo $themePath; ?>/img/google/GoogleSearch.png">
           </div>
         </div>

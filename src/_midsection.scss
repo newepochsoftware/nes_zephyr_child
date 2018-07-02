@@ -87,6 +87,11 @@ $skew: -15deg;
     }
     h3 {
       margin: 0 0 5rem;
+
+      @include breakpoint(small down){
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
     }
 
     ul {
@@ -102,6 +107,10 @@ $skew: -15deg;
           color: $green;
           font-size: 1.35rem;
         }
+
+        @include breakpoint(small down){
+          margin-top: 2rem;
+        }
       }
 
       @include breakpoint(small down){
@@ -112,11 +121,17 @@ $skew: -15deg;
     .google-grid {
       color: $dark-gray;
       margin-bottom: 12px;
+      text-align: center;
+
       .small-2 {
         text-align: center;
       }
       .googlesearch {
-        padding: 22px 0;
+        padding: 24px 10px;
+
+        @include breakpoint(small down){
+          max-width: 300px;
+        }
       }
       .googleicons {
         max-height: 50px;
