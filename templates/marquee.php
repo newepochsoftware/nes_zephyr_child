@@ -55,10 +55,10 @@
 
           <div class="grid-x grid-margin-x">
             <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/RedBull-white.png">
+              <img src="<?php echo $themePath; ?>/img/clients/LIB-Logo-white.png">
             </div>
             <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/LIB-Logo-white.png">
+              <img src="<?php echo $themePath; ?>/img/clients/RedBull-white.png">
             </div>
             <div class="cell auto">
               <img src="<?php echo $themePath; ?>/img/clients/Hakkasan-Logo-white.png">
