@@ -80,7 +80,7 @@ $skew: -15deg;
   }
 
   .google-block {
-    margin-top: 4rem;
+    margin-top: 1rem;
 
     .cell {
       padding: 0 .9375rem;
@@ -120,14 +120,13 @@ $skew: -15deg;
 
     .google-grid {
       color: $dark-gray;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       text-align: center;
 
       .small-2 {
         text-align: center;
       }
       .googlesearch {
-        padding: 24px 10px;
 
         @include breakpoint(small down){
           max-width: 300px;
