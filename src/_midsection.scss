@@ -52,7 +52,7 @@ $skew: -15deg;
     }
 
     @include breakpoint(small down){
-      top: 8rem;
+      top: 3rem;
     }
   }
 
@@ -332,6 +332,7 @@ $skew: -15deg;
 
       @include breakpoint(small down){
         top: -8rem;
+        height: 52rem;
       }
     }
 

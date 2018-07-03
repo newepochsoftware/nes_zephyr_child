@@ -76,18 +76,19 @@ $foundation-palette: (
   alert: #cc4b37,
 );
 
-$red: #e8453c;
-$orange: #fd6d22;
-$yellow: #f8ba2d;
-$green: #3aa757;
+$red: #EA4335;
+$orange: #FF6D00;
+$yellow: #FBBC04;
+$green: #34A853;
 $blue: #4285F4;
 $lt-blue: #4688f1;
+$dk-blue: #185ABC;
 
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$light-gray: #DADCE0;
+$medium-gray: #9AA0A6;
 $dark-gray: #5F6368;
 
-$black: #0a0a0a;
+$black: #202124;
 $white: #fefefe;
 
 $body-background: $white;
@@ -139,6 +140,8 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
+
+$nesfont: 'Montserrat', sans-serif;
 
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;

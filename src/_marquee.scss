@@ -23,20 +23,20 @@ $skew: -15deg;
     .shape_1 {
       display: inline-block;
       position: relative;
-      top: -24rem;
+      top: 0rem;
       width: 45%;
-      height: 16rem;
+      height: 26rem;
       opacity: 0.5;
       background: rgba(255,255,255, 1);
-      background:    -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-      background:   linear-gradient(to right,   rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background:    -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background:   linear-gradient(to bottom,   rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
       mix-blend-mode: soft-light;
 
       &.pos_2 {
         top: 45rem;
         left: 6rem;
-        height: 40rem;
+        height: 26rem;
         
         @include breakpoint(small down){
           left: -14rem;
@@ -93,7 +93,6 @@ $skew: -15deg;
 
     .hilite {
       font-weight: 700;
-      color: $orange;
       text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
     }
   }
@@ -109,7 +108,7 @@ $skew: -15deg;
       border-radius: 23px;
       padding: 10px 20px;
       height: 100%;
-      background: $white;
+      background: $orange;
       color: $white;
       font-size: 1.25rem;
       font-family: 'Montserrat', sans-serif;
@@ -122,24 +121,11 @@ $skew: -15deg;
         z-index: 10;
       }
 
-      .orangeSlate {
-        background-color: $orange;
-        display: inline-block;
-        position: absolute;
-        z-index: 9;
-        left: 0;
-        top: 0;
-        height: 101%;
-        width: 101%;
-        transition: 250ms ease-in-out;
-      }
-
       &:hover {
-        color: $orange;
-
-        .orangeSlate {
-          transform: translateX(100%);
-        }
+        color: $white;
+        background-color: #ea570b;
+        top: 1px;
+        box-shadow: 2px 3px 0px rgba(0,0,0,0.20);
       }
     }
 

@@ -34,7 +34,6 @@
         <div class="request_demo" id="request_demo">
           <a href="#">
             <span>Request Demo</span>
-            <div class="orangeSlate"></div>
           </a>
         </div>
         

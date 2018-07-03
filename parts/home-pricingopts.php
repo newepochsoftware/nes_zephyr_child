@@ -22,7 +22,7 @@
           <li>Users: 1</li>
           <li>Campaigns: 3</li>
           <li>Leads: 1,000/mo</li>
-          <li>Data Storage: Unlimited</li>          
+          <li>Retention: Up to 4 yr.</li>          
           <li>Price per certificate: $0.20</li>
         </ul>
       </div>
@@ -36,7 +36,7 @@
           <li>Users: 5</li>
           <li>Campaigns: 10</li>
           <li>Leads: 4,000/mo</li>
-          <li>Data Storage: Unlimited</li>
+          <li>Retention: Up to 4 yr.</li>
           <li>Price per certificate: $0.12</li>
         </ul>
       </div>
@@ -50,7 +50,7 @@
           <li>Users: 10</li>
           <li>Campaigns: 10</li>
           <li>Leads: 10,000/mo</li>
-          <li>Data Storage: Unlimited</li>
+          <li>Retention: Up to 4 yr.</li>
           <li>Price per certificate: $0.10</li>
         </ul>
       </div>
@@ -63,8 +63,8 @@
           <li>Users: Up to 100</li>
           <li>Campaigns: Up to 200</li>
           <li>Leads: Unlimited</li>
-          <li>Data Storage: Unlimited</li>
-          <li>Price per certificate: $0.05</li>
+          <li>Retention: Up to 4 yr.</li>
+          <li>Price per certificate: < $0.10</li>
         </ul>
       </div>
     </div>
