@@ -39,7 +39,9 @@ $skew: -15deg;
         height: 26rem;
         
         @include breakpoint(small down){
-          left: -14rem;
+          left: 0rem;
+          top: 20rem;
+          width: 100%;
         }
       }
     }
@@ -61,6 +63,42 @@ $skew: -15deg;
         background-repeat: no-repeat;
         height: 70px;
         width: 210px;
+
+        .homelink {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .menublock{
+        text-align: right;
+
+        ul {
+          padding: 22px 0;
+
+          li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 0 0 2.5rem;
+
+            a {
+              color: $white;
+              font-family: $nesfont;
+              text-transform: uppercase;
+              font-size: 1.15rem;
+
+              &:hover {
+                color: $light-gray;
+                text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+              }
+            }
+          }
+        }
+
+        @include breakpoint(small down) {
+          display: none;
+        }
       }
 
       @include breakpoint(small down){

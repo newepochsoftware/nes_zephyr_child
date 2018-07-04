@@ -5,7 +5,7 @@
  * 
  */
 
- $themePath = get_stylesheet_directory_uri();
+$themePath = get_stylesheet_directory_uri();
 ?>
 
 <!-- marquee -->
@@ -16,14 +16,29 @@
     <span class="shape_1"></span>
     <span class="shape_1 pos_2"></span>
   </div>
-  <!-- div class="angle_1 offset_4"></div -->
-  <!-- ^^angled colors^^ -->
+  <!-- angled colors -->
 
   <!-- grid container -->
   <div class="grid-container">
     <div class="grid-x logo-grid">
-      <div class="cell small-12">
-        <div class="logo"></div>
+      <div class="cell small-6">
+        <div class="logo"><a href="/" class="homelink"></a></div>
+      </div>
+      <div class="cell small-6 menublock">
+        <ul class="nes_mainmenu">
+          <?php 
+            wp_nav_menu(
+              array(
+                'menu'=>'nes2018-mainmenu',
+                'container' => 'ul',
+                'container_class' => 'nes_mainmenu',
+                /*'walker' => new US_Walker_Nav_Menu,*/
+                'items_wrap' => '%3$s',
+                'fallback_cb' => FALSE,
+              )
+            );
+          ?>
+        </ul>
       </div>
     </div>
     <div class="grid-x">
@@ -77,7 +92,7 @@
           </div>
 
         </div>
-        <!-- ^^Trusted Grid -->
+        <!-- Trusted Grid -->
 
       </div>
       <div class="cell small-12 medium-4 hide-for-small-only">
@@ -86,7 +101,7 @@
     </div>
 
   </div>
-  <!-- ^^grid container^^ -->
+  <!-- grid container -->
 
 </div>
-<!-- ^^marquee^^ -->
+<!-- marquee -->

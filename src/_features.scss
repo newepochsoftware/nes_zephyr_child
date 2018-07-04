@@ -78,6 +78,7 @@
     .cell {
       position: relative;
       padding: 0 .9375rem;
+      z-index: 999;
 
       .tablet {
         position: relative;
@@ -119,7 +120,9 @@
         &.left {
           position: relative;
           left: -150%;
-
+          @include breakpoint(899px down){
+            left: -180%;
+          }
           @include breakpoint(small down){
             left: initial;
             width: 100%;

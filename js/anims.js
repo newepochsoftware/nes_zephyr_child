@@ -9,7 +9,15 @@ tippy('.tipped', {
 });
 
 (function($){
+  var md = new MobileDetect(window.navigator.userAgent);
   console.log("Custom jQuery Loaded.");
+
+  var offsetValue = (md.mobile()) ? 100 : 500;
+
+  AOS.init({
+    offset: offsetValue,
+    duration: 750
+  });
 
 })(jQuery);
 

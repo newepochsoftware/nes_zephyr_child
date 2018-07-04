@@ -184,6 +184,10 @@ $skew: -15deg;
     h3 {
       display: inline;
       vertical-align: middle;
+
+      @include breakpoint(899px down) {
+        font-size: 1.75rem;
+      }
     }
     p {
       margin-top: 2rem;
@@ -197,6 +201,11 @@ $skew: -15deg;
 
       path, polygon {
         fill: $white;
+      }
+
+      @include breakpoint(899px down) {
+        height: 32px;
+        padding-right: 0.25rem;
       }
     }
 
@@ -216,17 +225,28 @@ $skew: -15deg;
   .fingerprint {
     position: relative;
     margin-bottom: 22rem;
-    
+
     .spinner {
       position: absolute;
       transform: translateX(-50%);
       width: 500px;
       height: 500px;
-      top: -142px;
+      top: -9rem;
       left: 50%;
       z-index: 1;
-      opacity: 0.35;
-      mix-blend-mode: overlay;
+
+      .icon {
+        height: 70px;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+  
+        path, polygon {
+          fill: $white;
+        }
+      }
          
       @keyframes rotate {
           0% { transform: rotate(0deg); }
@@ -241,6 +261,8 @@ $skew: -15deg;
         .circle-#{$i} {
           position: absolute;
           background: none;
+          mix-blend-mode: overlay;
+          opacity: 0.35;
 
           width: ($multiplier - $subtractor)+px;
           height: ($multiplier - $subtractor)+px;
@@ -301,17 +323,8 @@ $skew: -15deg;
         margin: 1rem auto;
       }
       p {
-        margin-top: 2rem;
+        margin-top: 11rem;
         color: $white;
-      }
-
-      .icon {
-        height: 70px;
-        margin: 1rem 0;
-
-        path, polygon {
-          fill: $white;
-        }
       }
     }
 

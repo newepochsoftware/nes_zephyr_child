@@ -14,13 +14,13 @@ $themePath = get_stylesheet_directory_uri();
         <h3>LEAD INTELLIGENCE</h3>
         <p>Lead Verified records every interaction with your web site and provides heatmaps of visitor interactions so you can see which portions of your web site are getting engagement, and which portions may be overlooked. Use heatmaps for conversion rate optimization (CRO) and to ensure that disclaimers required for compliance are seen by your site visitors.</p>
       </div>
-      <div class="cell small-12 medium-4 max5">
+      <div class="cell small-12 medium-4 max5" data-aos="fade-up">
         <div class="tablet straight heatmap"></div>
       </div>
     </div>
 
     <div class="grid-x feature-row">
-      <div class="cell small-12 small-order-2 medium-4 medium-order-1">
+      <div class="cell small-12 small-order-2 medium-4 medium-order-1" data-aos="fade-up">
         <div class="tablet straight compliance left"></div>
       </div>
       <div class="cell small-12 small-order-1 medium-8 medium-order-2">
@@ -36,13 +36,13 @@ $themePath = get_stylesheet_directory_uri();
         <h3>LEAD SCORING</h3>
         <p>Lead Verified serves as a failover solution for lead posts, scores every lead using our proprietary grading system, and issues a certificate of authenticity for each lead. Use Lead Verified to ensure data integrity before leads enter your system and are routed to sales reps, partners, or lead buyers. Selectively post only the leads that meet your criteria.</p>
       </div>
-      <div class="cell small-12 medium-4 max5">
+      <div class="cell small-12 medium-4 max5" data-aos="fade-up">
         <div class="tablet straight score"></div>
       </div>
     </div>
 
     <div class="grid-x feature-row">
-      <div class="cell small-12 small-order-2 medium-4 medium-order-1">
+      <div class="cell small-12 small-order-2 medium-4 medium-order-1" data-aos="fade-up">
         <div class="tablet straight capture left"></div>
       </div>
       <div class="cell small-12 small-order-1 medium-8 medium-order-2">
@@ -58,13 +58,13 @@ $themePath = get_stylesheet_directory_uri();
         <h3>DATA WAREHOUSING</h3>
         <p>Archive lead data in user-specified FTP (on-premise) or Google Drive locations. Activate as a data warehousing or data pass-through application. Use Lead Verified to back-up primary systems and provide a failover solution with full recovery capability.</p>
       </div>
-      <div class="cell small-12 medium-4 max5">
+      <div class="cell small-12 medium-4 max5" data-aos="fade-up">
         <div class="tablet straight data"></div>
       </div>
     </div>
 
     <div class="grid-x feature-row">
-      <div class="cell small-12 small-order-2 medium-4 medium-order-1">
+      <div class="cell small-12 small-order-2 medium-4 medium-order-1" data-aos="fade-up">
         <div class="tablet straight reports left"></div>
       </div>
       <div class="cell small-12 small-order-1 medium-8 medium-order-2">
