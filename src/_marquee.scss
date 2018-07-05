@@ -104,8 +104,10 @@ $skew: -15deg;
           right: 10px;
           display: none;
           color: #fff;
-          font-size: 3rem;
+          font-size: 2.5rem;
           padding-right: 1rem;
+          z-index: 9999;
+          text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
 
           @include breakpoint(small down) {
             display: block;

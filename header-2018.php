@@ -5,23 +5,29 @@
 $us_layout = US_Layout::instance();
 ?>
 <!DOCTYPE HTML>
-<html class="<?php echo $us_layout->html_classes() ?>" <?php language_attributes( 'html' ) ?>>
+<html class="<?php echo $us_layout->html_classes() ?>" <?php language_attributes('html') ?>>
   <head>
     <meta charset="UTF-8">
-    <!-- 2018 Header -->
     
     <?php wp_head(); ?>
 
-    <?php if ( ( defined( 'US_DEV' ) AND US_DEV ) OR us_get_option( 'optimize_assets', 0 ) == 0 ): ?>
-      <style id='us-theme-options-css' type="text/css"><?php echo us_get_theme_options_css() ?></style>
+    <?php if ( (defined('US_DEV') AND US_DEV) OR us_get_option('optimize_assets', 0) == 0 ): ?>
+      <!-- dev theme options -->
+      <style id='us-theme-options-css' type="text/css">
+        <?php echo us_get_theme_options_css() ?>
+      </style>
     <?php endif; ?>
 
     <?php if ( $us_layout->header_show != 'never' ): ?>
-      <style id='us-header-css' type="text/css"><?php echo us_minify_css( us_get_template( 'config/header.css' ) ) ?></style>
+      <style id='us-header-css' type="text/css">
+        <?php echo us_minify_css( us_get_template('config/header.css') ) ?>
+      </style>
     <?php endif; ?>
     
     <?php if ( us_get_option( 'optimize_assets', 0 ) == 0 AND ( $us_custom_css = us_get_option( 'custom_css', '' ) ) != '' ): ?>
-      <style id='us-custom-css' type="text/css"><?php echo us_minify_css( $us_custom_css ) ?></style>
+      <style id='us-custom-css' type="text/css">
+        <?php echo us_minify_css( $us_custom_css ) ?>
+      </style>
     <?php endif; ?>
 
   </head>
@@ -66,7 +72,5 @@ $us_layout = US_Layout::instance();
     <div class="l-canvas <?php echo $us_layout->canvas_classes() ?>">
 
 	  <?php if ( $us_layout->header_show != 'never' ): ?>
-		  <?php //do_action( 'us_before_header' ) ?>
 		  <?php us_load_template( 'templates/marquee' ) ?>
-		  <?php //do_action( 'us_after_header' ) ?>
 	  <?php endif/*( $us_layout->header_show != 'never' )*/; ?>

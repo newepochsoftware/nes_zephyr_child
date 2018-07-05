@@ -14,14 +14,17 @@ tippy('.tipped', {
 /**
  * Typing effect settings
  */
-var typeOptions = {
-  strings: ["Lead Intelligence.", "Regulatory Compliance.", "Lead Scoring.", "Proof of Submission.", "Lead Archiving.", "Fraud Prevention."],
-  typeSpeed: 50,
-  backSpeed: 25,
-  backDelay: 3000,
-  loop: true
+
+if(document.getElementById('typing')){
+  var typeOptions = {
+    strings: ["Lead Intelligence.", "Regulatory Compliance.", "Lead Scoring.", "Proof of Submission.", "Lead Archiving.", "Fraud Prevention."],
+    typeSpeed: 50,
+    backSpeed: 25,
+    backDelay: 3000,
+    loop: true
+  }
+  var typed = new Typed('#typing', typeOptions);
 }
-var typed = new Typed('#typing', typeOptions);
 
 /** jQuery Encapsulation */
 (function($){
