@@ -25,6 +25,7 @@ $themePath = get_stylesheet_directory_uri();
         <div class="logo"><a href="/" class="homelink"></a></div>
       </div>
       <div class="cell small-6 menublock">
+        <div class="menuburger"><i class="fal fa-bars"></i></div>
         <ul class="nes_mainmenu">
           <?php 
             wp_nav_menu(
@@ -43,7 +44,7 @@ $themePath = get_stylesheet_directory_uri();
     </div>
     <div class="grid-x">
       <div class="cell small-12 medium-8">
-        <h1>Your solution for lead scoring and data compliance</h1>
+        <h1>Your solution for <span id="typing" class="typing"></span></h1>
         <p>Lead Verified provides visit history, archival, data recovery, and authenticity certificates for your webleads and user-generated content. We process thousands of leads per day so our clients can buy, sell, and integrate leads while supporting <span class="hilite">TCPA</span>, <span class="hilite">GDPR</span>, and <span class="hilite">MiFID</span> compliance requirements.</p>
         
         <div class="request_demo" id="request_demo">

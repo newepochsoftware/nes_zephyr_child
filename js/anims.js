@@ -1,3 +1,6 @@
+/**
+ * Tippy script
+ */
 tippy('.tipped', {
   delay: 100,
   arrow: true,
@@ -8,12 +11,32 @@ tippy('.tipped', {
   animation: 'shift-toward'
 });
 
+/**
+ * Typing effect settings
+ */
+var typeOptions = {
+  strings: ["Lead Intelligence.", "Regulatory Compliance.", "Lead Scoring.", "Proof of Submission.", "Lead Archiving.", "Fraud Prevention."],
+  typeSpeed: 50,
+  backSpeed: 25,
+  backDelay: 3000,
+  loop: true
+}
+var typed = new Typed('#typing', typeOptions);
+
+/** jQuery Encapsulation */
 (function($){
+  //console.log("Custom jQuery Loaded.");
+  
+  /**
+   * Mobile Detection
+   */
   var md = new MobileDetect(window.navigator.userAgent);
-  console.log("Custom jQuery Loaded.");
-
   var offsetValue = (md.mobile()) ? 100 : 500;
-
+  console.log(offsetValue);
+  
+  /**
+   * Animate on Scroll settings
+   */
   AOS.init({
     offset: offsetValue,
     duration: 750

@@ -45,6 +45,10 @@ $skew: -15deg;
         }
       }
     }
+
+    @include breakpoint(small down){
+      height: 64rem;
+    }
   }
 
   .grid-container {
@@ -95,9 +99,23 @@ $skew: -15deg;
             }
           }
         }
-
-        @include breakpoint(small down) {
+        .menuburger {
+          position: fixed;
+          right: 10px;
           display: none;
+          color: #fff;
+          font-size: 3rem;
+          padding-right: 1rem;
+
+          @include breakpoint(small down) {
+            display: block;
+          }
+        }
+        .nes_mainmenu {
+          
+          @include breakpoint(small down) {
+            display: none;
+          }
         }
       }
 
@@ -117,11 +135,23 @@ $skew: -15deg;
   }
 
   h1 {
-    font-size: 2.15rem;
+    font-size: 2.35rem;
     line-height: 2.5rem;
     margin-bottom: 2rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
+    font-weight: 300;
     color: $white;
+    height: 70px;
+
+    .typing {
+      font-weight: 700;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+    }
+
+    @include breakpoint(small down){
+      font-size: 2rem;
+      height: 85px;
+    }
   }
   p {
     font-family: 'Montserrat', sans-serif;
@@ -132,6 +162,11 @@ $skew: -15deg;
     .hilite {
       font-weight: 700;
       text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+    }
+
+    @include breakpoint(small down){
+      font-size: 1.125rem;
+      line-height: 2rem;
     }
   }
 
