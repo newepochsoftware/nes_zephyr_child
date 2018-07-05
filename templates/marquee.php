@@ -25,20 +25,9 @@ $themePath = get_stylesheet_directory_uri();
         <div class="logo"><a href="/" class="homelink"></a></div>
       </div>
       <div class="cell small-6 menublock">
-        <div class="menuburger"><i class="fal fa-bars"></i></div>
+        <div class="menuburger"><a href="#" id="openmenu"><i class="fal fa-bars"></i></a></div>
         <ul class="nes_mainmenu">
-          <?php 
-            wp_nav_menu(
-              array(
-                'menu'=>'nes2018-mainmenu',
-                'container' => 'ul',
-                'container_class' => 'nes_mainmenu',
-                /*'walker' => new US_Walker_Nav_Menu,*/
-                'items_wrap' => '%3$s',
-                'fallback_cb' => FALSE,
-              )
-            );
-          ?>
+          <?php get_template_part( 'parts/home', 'menu' ); ?>
         </ul>
       </div>
     </div>

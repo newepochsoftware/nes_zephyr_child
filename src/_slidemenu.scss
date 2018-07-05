@@ -1,0 +1,39 @@
+.slideMenu {
+  position: fixed;
+  display: inline-block;
+  background-color: $dark-gray;
+  height: 100%;
+  width: 100%;
+  right: 0;
+
+  ul {
+    margin: 6rem 0 0;
+    list-style: none;
+    text-align: right;
+
+    li {
+      font-family: $nesfont;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 0.5rem 1.5rem;
+
+      a {
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .dots {
+    background-image: url(../img/NES_dotsOnly@2x.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    opacity: 0.25;
+  }
+}

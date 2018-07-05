@@ -45,6 +45,19 @@ if(document.getElementById('typing')){
     duration: 750
   });
 
+  var menuInit = false;
+  $('#openmenu').on('click', function(e){
+    e.preventDefault();
+
+    if(!menuInit){
+      menuInit = true;
+      $('#nes-canvas').animate({right: '14rem'}, 500);
+    } else {
+      menuInit = false;
+      $('#nes-canvas').animate({right: '0rem'}, 500);
+    }
+  });
+
 })(jQuery);
 
 /*
