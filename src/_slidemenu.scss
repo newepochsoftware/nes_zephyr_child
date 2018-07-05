@@ -24,6 +24,12 @@
     }
   }
 
+  .close {
+    color: $white;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+    font-size: 2.5rem;
+  }
+
   .dots {
     background-image: url(../img/NES_dotsOnly@2x.png);
     background-position: bottom right;

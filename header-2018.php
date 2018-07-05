@@ -68,11 +68,12 @@ $us_layout = US_Layout::instance();
     }
     do_action( 'us_before_canvas' ) ?>
 
+    <div class="slideMenu">
+      <div class="close"><i class="fal fa-times"></i></div>
+      <ul><?php get_template_part( 'parts/home', 'menu' ); ?></ul>
+      <div class="dots"></div>
+    </div>
     <div id="nes-canvas" class="l-canvas nes-canvas <?php echo $us_layout->canvas_classes() ?>">
-      <div class="slideMenu">
-        <ul><?php get_template_part( 'parts/home', 'menu' ); ?></ul>
-        <div class="dots"></div>
-      </div>
       <?php if ( $us_layout->header_show != 'never' ): ?>
         <?php us_load_template( 'templates/marquee' ) ?>
       <?php endif; ?>
