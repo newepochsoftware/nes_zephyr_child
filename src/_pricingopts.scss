@@ -8,8 +8,8 @@ $nusku: -7deg;
     overflow: hidden;
     z-index: 5;
     left: 50%;
-    top: 27rem;
-    height: 42rem;
+    top: 25rem;
+    height: 31rem;
     width: 100%;
     -webkit-transform: translateX(-50%) skewY($nusku);
     transform: translateX(-50%) skewY($nusku);
@@ -26,6 +26,7 @@ $nusku: -7deg;
 
   .pricingInfo {
     margin: 5rem 0;
+    z-index: 10;
 
     h3 {
       font-family: 'Montserrat', sans-serif;
@@ -58,7 +59,7 @@ $nusku: -7deg;
 
     .slideMe {
       position: relative;
-      top: 10rem;
+      top: 0;
 
       .cell {
         position: relative;
