@@ -51,9 +51,11 @@ if(document.getElementById('typing')){
 
     if(!menuInit){
       menuInit = true;
+      $('.fa-bars').animate({opacity: 0});
       $('#nes-canvas').animate({right: '14rem'}, 500);
     } else {
       menuInit = false;
+      $('.fa-bars').animate({opacity: 1});
       $('#nes-canvas').animate({right: '0rem'}, 500);
     }
   });
