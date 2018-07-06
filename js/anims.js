@@ -29,9 +29,7 @@ if(document.getElementById('typing')){
 /**
  * Particles init
  */
-particlesJS.load('honeycomb', '../wp-content/themes/NES-zephyrChild/js/nes-particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+particlesJS.load('honeycomb', '../wp-content/themes/nes_zephyr_child/js/nes-particles.json');
 
 /** jQuery Encapsulation */
 (function($){
