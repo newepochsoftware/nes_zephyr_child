@@ -44,44 +44,27 @@ $themePath = get_stylesheet_directory_uri();
         
         <!-- Trusted Grid -->
         <div class="trusted-grid">
-          <h3>Our Clients</h3>
-          <div class="grid-x grid-margin-x">
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/Hakkasan-Logo-white.png">
-            </div>
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/OMNIA-Logo-white.png">
-            </div>
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/AllPurposeLoans-Logo-white.png">
-            </div>
-          </div>
-
-          <div class="grid-x grid-margin-x">
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/LIB-Logo-white.png">
-            </div>
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/RedBull-white.png">
-            </div>
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/p1440_white.png">
-            </div>
-          </div>
+          <h3>Our Clients Include</h3>
+          <?php //get_template_part( 'parts/home', 'clientgrid' ); ?>
           
-          <!--
-          <div class="grid-x grid-margin-x">
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/BoxedWater_white.png">
+          <div class="grid-x grid-margin-x ">
+            <div class="cell auto text-left">
+              <ul>
+                <li>Insurance Companies</li>
+                <li>Mortgage Lenders</li>
+                <li>Music Festivals</li>
+                <li>Nightlife Venues</li>
+              </ul>
             </div>
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/Vidanta_white.png">
-            </div>
-            <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/p1440_white.png">
+            <div class="cell auto text-left">
+              <ul>
+                <li>Recording Artists</li>
+                <li>Restaurants &amp; Bars</li>
+                <li>Sports Franchises</li>
+                <li>Tech Companies</li>
+              </ul>
             </div>
           </div>
-          -->
 
         </div>
         <!-- Trusted Grid -->
