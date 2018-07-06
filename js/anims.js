@@ -26,6 +26,13 @@ if(document.getElementById('typing')){
   var typed = new Typed('#typing', typeOptions);
 }
 
+/**
+ * Particles init
+ */
+particlesJS.load('honeycomb', '../wp-content/themes/NES-zephyrChild/js/nes-particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+
 /** jQuery Encapsulation */
 (function($){
   //console.log("Custom jQuery Loaded.");

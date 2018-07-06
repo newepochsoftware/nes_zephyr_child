@@ -1,7 +1,7 @@
 <?php
 
 $vDate = date('mdY');
-$vMarker = '1.7.'.$vDate.'.E';
+$vMarker = '1.7.'.$vDate.'.F';
 define('THEME_PATH', get_stylesheet_directory_uri());
 define('LV_VERSION', $vMarker);
 
@@ -56,6 +56,14 @@ function add_typing() {
   wp_enqueue_script( 'typed-script', THEME_PATH.'/js/typed.min.js', array(), LV_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'add_typing', 13 );
+
+/**
+ * Particles Script
+ */
+function add_particles() {
+  wp_enqueue_script( 'particles-script', THEME_PATH.'/js/particles.min.js', array(), LV_VERSION, true );
+}
+add_action( 'wp_enqueue_scripts', 'add_particles', 14 );
 
 /**
  * Register Extra Menu

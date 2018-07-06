@@ -47,7 +47,7 @@ $themePath = get_stylesheet_directory_uri();
 
   <!-- Easy/Developer Sections -->
   <div class="easy-dev">
-    <div class="honeycomb"></div>
+    <div class="honeycomb" id="honeycomb"></div>
     <div class="grid-container">
       <div class="grid-x">
   
