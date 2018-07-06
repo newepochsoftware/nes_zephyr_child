@@ -1,5 +1,4 @@
 var templateUrl = object_name.templateUrl;
-console.log(templateUrl);
 /**
  * Tippy script
  */
@@ -42,7 +41,6 @@ particlesJS.load('honeycomb', templateUrl+'/js/nes-particles.json');
    */
   var md = new MobileDetect(window.navigator.userAgent);
   var offsetValue = (md.mobile()) ? 100 : 500;
-  console.log(offsetValue);
   
   /**
    * Animate on Scroll settings

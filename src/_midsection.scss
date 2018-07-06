@@ -19,7 +19,7 @@ $skew: -15deg;
     font-size: 1.35rem;
 
     @include breakpoint(small down){
-      padding: 0 1rem;
+      padding: 0;
     }
   }
 
@@ -113,7 +113,7 @@ $skew: -15deg;
 
         @include breakpoint(small down){
           margin-top: 1rem;
-          font-size: 1.25rem;
+          font-size: 1.1rem;
         }
       }
 

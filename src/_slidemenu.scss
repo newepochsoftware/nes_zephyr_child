@@ -21,6 +21,10 @@
         color: $white;
         text-transform: uppercase;
       }
+
+      &.ancillary {
+        font-size: 0.875rem;
+      }
     }
   }
   @include breakpoint(small down){

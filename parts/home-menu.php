@@ -9,3 +9,7 @@ wp_nav_menu(
     'fallback_cb' => FALSE,
   )
 );
+?>
+<li class="break"></li>
+<li class="ancillary"><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="ancillary"><a href="/tos">Terms of Service</a></li>

@@ -28,7 +28,7 @@
 
         <div class="startnow">
           <a href="https://newepochsoftware.recurly.com/subscribe/lv_basic" target="_blank">
-            <span>Start Now</span>
+            <span>Buy Now</span>
           </a>
         </div>
       </div>
@@ -48,7 +48,7 @@
 
         <div class="startnow pro">
           <a href="https://newepochsoftware.recurly.com/subscribe/lv_pro" target="_blank">
-            <span>Start Now</span>
+            <span>Buy Now</span>
           </a>
         </div>
       </div>
@@ -68,7 +68,7 @@
 
         <div class="startnow">
           <a href="https://newepochsoftware.recurly.com/subscribe/lv_ent" target="_blank">
-            <span>Start Now</span>
+            <span>Buy Now</span>
           </a>
         </div>
       </div>
