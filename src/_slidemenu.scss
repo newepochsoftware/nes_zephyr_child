@@ -22,10 +22,9 @@
         text-transform: uppercase;
       }
     }
-
-    @include breakpoint(small down){
-      display: inline-block;
-    }
+  }
+  @include breakpoint(small down){
+    display: inline-block;
   }
 
   .close {
