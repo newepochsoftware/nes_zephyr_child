@@ -1,0 +1,149 @@
+$skew: -5deg;
+
+.nes_marquee {
+  position: relative;
+
+  .angle_10 {
+    position: absolute;
+    /*overflow: hidden;*/
+    z-index: 0;
+    left: 50%;
+    height: 17rem;
+    width: 100%;
+    -webkit-transform: translateX(-50%) skewY($skew);
+    transform: translateX(-50%) skewY($skew);
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+    background: rgb(255,255,255);
+    background:    -moz-linear-gradient(top, rgba(174, 173, 177, 1) 0%, rgba(175, 204, 219, 0.15) 100%);
+    background:   linear-gradient(to bottom, rgba(174, 173, 177, 1) 0%, rgba(175, 204, 219, 0.15) 100%);
+    background: -webkit-linear-gradient(top, rgba(174, 173, 177, 1) 0%, rgba(175, 204, 219, 0.15) 100%);
+
+    .shape_1 {
+      display: inline-block;
+      position: absolute;
+      top: 0rem;
+      width: 40%;
+      height: 14rem;
+      opacity: 0.65;
+      background: rgba(255,255,255, 1);
+      /*background:    -moz-linear-gradient(-45deg, rgba(98, 122, 136,1) 0%, rgba(102,91,147,1) 50%, rgba(255,255,255,1) 100%);*/
+      background:    -moz-linear-gradient(-45deg, rgba(98, 122, 136,1) 0%, rgba(255,255,255,0) 100%);
+      /*background:   linear-gradient(135deg, rgba(98, 122, 136,1) 0%,rgba(102,91,147,1) 50%,rgba(255,255,255,1) 100%);*/
+      background:   linear-gradient(135deg, rgba(98, 122, 136,1) 0%, rgba(255,255,255,0) 100%);
+      /*background: -webkit-linear-gradient(-45deg, rgba(98,122,136,1) 0%,rgba(102,91,147,1) 50%,rgba(255,255,255,1) 100%);*/
+      background: -webkit-linear-gradient(-45deg, rgba(98, 122, 136,1) 0%, rgba(255,255,255,0) 100%);
+      mix-blend-mode: darken;
+
+      &.pos_2 {
+        top: 9rem;
+        right: 0;
+        height: 9rem;
+        opacity: 0.45;
+        width: 43%;
+        
+        @include breakpoint(small down){
+          left: 0rem;
+          top: 18rem;
+          width: 100%;
+        }
+      }
+    }
+
+    @include breakpoint(small down){
+      height: 60rem;
+    }
+  }
+
+  .nes_menu {
+    background-color: rgba(0,0,0,0.15);
+    background:    -moz-linear-gradient(bottom, rgba(98, 122, 136, 0.1) 0%, rgba(255,255,255,0) 100%);
+    background:   linear-gradient(to top,       rgba(98, 122, 136, 0.1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(bottom, rgba(98, 122, 136, 0.1) 0%, rgba(255,255,255,0) 100%);
+    padding-bottom: 1rem;
+  }
+  .grid-container {
+    position: relative;
+    z-index: 10;
+    padding-top: 4rem;
+
+    .logo-grid {
+      margin-bottom: 0;
+
+      .logo {
+        position: relative;
+        background-image: url('../img/NES_LogoAlt_whiteKnockout.png');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 70px;
+        width: 210px;
+        filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2));
+
+        .homelink {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .menublock{
+        text-align: right;
+
+        ul {
+          padding: 22px 0;
+
+          li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 0 0 2.5rem;
+
+            a {
+              color: $white;
+              font-family: $nesfont;
+              text-transform: uppercase;
+              font-size: 1.15rem;
+              text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+
+              &:hover {
+                color: $dark-gray;
+                text-shadow: none;
+              }
+            }
+          }
+        }
+        .menuburger {
+          position: fixed;
+          right: 10px;
+          display: none;
+          font-size: 2.5rem;
+          padding-right: 1rem;
+          z-index: 9999;
+          text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+
+          a {
+            color: #fff;
+          }
+
+          @include breakpoint(small down) {
+            display: block;
+          }
+        }
+        .nes_mainmenu {
+          
+          @include breakpoint(small down) {
+            display: none;
+          }
+        }
+      }
+
+      @include breakpoint(small down){
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include breakpoint(small down){
+      padding-top: 1rem;
+    }
+  }
+}

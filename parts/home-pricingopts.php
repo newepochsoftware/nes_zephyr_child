@@ -25,6 +25,12 @@
           <li>Retention: Up to 4 yr.</li>          
           <li>Price per certificate: $0.20</li>
         </ul>
+
+        <div class="startnow">
+          <a href="https://newepochsoftware.recurly.com/subscribe/lv_basic" target="_blank">
+            <span>Start Now</span>
+          </a>
+        </div>
       </div>
       
       <div class="cell small-12 medium-3 popular">
@@ -39,6 +45,12 @@
           <li>Retention: Up to 4 yr.</li>
           <li>Price per certificate: $0.12</li>
         </ul>
+
+        <div class="startnow pro">
+          <a href="https://newepochsoftware.recurly.com/subscribe/lv_pro" target="_blank">
+            <span>Start Now</span>
+          </a>
+        </div>
       </div>
       
       <div class="cell small-12 medium-3">
@@ -53,6 +65,12 @@
           <li>Retention: Up to 4 yr.</li>
           <li>Price per certificate: $0.10</li>
         </ul>
+
+        <div class="startnow">
+          <a href="https://newepochsoftware.recurly.com/subscribe/lv_ent" target="_blank">
+            <span>Start Now</span>
+          </a>
+        </div>
       </div>
       
       <div class="cell small-12 medium-3">
@@ -66,6 +84,12 @@
           <li>Retention: Up to 4 yr.</li>
           <li>Price per certificate: < $0.10</li>
         </ul>
+
+        <div class="startnow">
+          <a href="tel:+18884956219" target="_blank" class="tipped" title="1-888-495-6219">
+            <span>Call Now</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

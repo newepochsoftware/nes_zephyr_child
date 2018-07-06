@@ -1,6 +1,6 @@
 .slideMenu {
   position: fixed;
-  display: inline-block;
+  display: none;
   background-color: $dark-gray;
   height: 100%;
   width: 100%;
@@ -21,6 +21,10 @@
         color: $white;
         text-transform: uppercase;
       }
+    }
+
+    @include breakpoint(small down){
+      display: inline-block;
     }
   }
 

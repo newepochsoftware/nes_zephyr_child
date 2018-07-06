@@ -2,18 +2,19 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'header';
 
 @include foundation-everything;
 
-/** TEMPLATE SPECIFIC */
+/** HOME PAGE TEMPLATE SPECIFIC */
 @import 'slidemenu';
-@import 'marquee';
+@import 'homemarquee';
 @import 'formblock';
 @import 'midsection';
 @import 'features';
 @import 'pricingopts';
 
+/** GLOBAL SITE SPECIFIC */
+@import 'mainmarquee';
 
 /** OVERRIDES */
 body {
