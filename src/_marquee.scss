@@ -40,14 +40,14 @@ $skew: -15deg;
         
         @include breakpoint(small down){
           left: 0rem;
-          top: 20rem;
+          top: 18rem;
           width: 100%;
         }
       }
     }
 
     @include breakpoint(small down){
-      height: 64rem;
+      height: 60rem;
     }
   }
 
@@ -154,7 +154,8 @@ $skew: -15deg;
     }
 
     @include breakpoint(small down){
-      font-size: 2rem;
+      font-size: 1.75rem;
+      line-height: 2.25rem;
       height: 85px;
     }
   }

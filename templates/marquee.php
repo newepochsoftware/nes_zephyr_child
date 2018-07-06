@@ -33,7 +33,7 @@ $themePath = get_stylesheet_directory_uri();
     </div>
     <div class="grid-x">
       <div class="cell small-12 medium-8">
-        <h1>Your solution for <span id="typing" class="typing"></span></h1>
+        <h1>Lead Verified is your solution for<br> <span id="typing" class="typing"></span></h1>
         <p>Lead Verified provides visit history, archival, data recovery, and authenticity certificates for your webleads and user-generated content. We process thousands of leads per day so our clients can buy, sell, and integrate leads while supporting <span class="hilite">TCPA</span>, <span class="hilite">GDPR</span>, and <span class="hilite">MiFID</span> compliance requirements.</p>
         
         <div class="request_demo" id="request_demo">
@@ -47,7 +47,7 @@ $themePath = get_stylesheet_directory_uri();
           <h3>Our Clients</h3>
           <div class="grid-x grid-margin-x">
             <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/LiveNation-Logo-white.png">
+              <img src="<?php echo $themePath; ?>/img/clients/Hakkasan-Logo-white.png">
             </div>
             <div class="cell auto">
               <img src="<?php echo $themePath; ?>/img/clients/OMNIA-Logo-white.png">
@@ -65,10 +65,11 @@ $themePath = get_stylesheet_directory_uri();
               <img src="<?php echo $themePath; ?>/img/clients/RedBull-white.png">
             </div>
             <div class="cell auto">
-              <img src="<?php echo $themePath; ?>/img/clients/Hakkasan-Logo-white.png">
+              <img src="<?php echo $themePath; ?>/img/clients/p1440_white.png">
             </div>
           </div>
-
+          
+          <!--
           <div class="grid-x grid-margin-x">
             <div class="cell auto">
               <img src="<?php echo $themePath; ?>/img/clients/BoxedWater_white.png">
@@ -80,6 +81,7 @@ $themePath = get_stylesheet_directory_uri();
               <img src="<?php echo $themePath; ?>/img/clients/p1440_white.png">
             </div>
           </div>
+          -->
 
         </div>
         <!-- Trusted Grid -->
