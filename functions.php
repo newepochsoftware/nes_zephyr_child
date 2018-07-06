@@ -62,6 +62,9 @@ add_action( 'wp_enqueue_scripts', 'add_typing', 13 );
  */
 function add_particles() {
   wp_enqueue_script( 'particles-script', THEME_PATH.'/js/particles.min.js', array(), LV_VERSION, true );
+  
+  $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
+  wp_localize_script( 'particles-script', 'object_name', $translation_array );
 }
 add_action( 'wp_enqueue_scripts', 'add_particles', 14 );
 

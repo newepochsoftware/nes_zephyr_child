@@ -1,3 +1,5 @@
+var templateUrl = object_name.templateUrl;
+console.log(templateUrl);
 /**
  * Tippy script
  */
@@ -29,7 +31,7 @@ if(document.getElementById('typing')){
 /**
  * Particles init
  */
-particlesJS.load('honeycomb', '../wp-content/themes/nes_zephyr_child/js/nes-particles.json');
+particlesJS.load('honeycomb', templateUrl+'/js/nes-particles.json');
 
 /** jQuery Encapsulation */
 (function($){
