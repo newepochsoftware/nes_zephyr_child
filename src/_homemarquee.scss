@@ -229,6 +229,7 @@ $skew: -15deg;
       li {
         font-family: $nesfont;
         color: $white;
+        font-size: 1rem;
 
         @include breakpoint(small down){
           font-size: 3.75vw;

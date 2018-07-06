@@ -10,6 +10,3 @@ wp_nav_menu(
   )
 );
 ?>
-<li class="break"></li>
-<li class="ancillary"><a href="/privacy-policy">Privacy Policy</a></li>
-<li class="ancillary"><a href="/tos">Terms of Service</a></li>

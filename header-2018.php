@@ -85,7 +85,12 @@ $us_layout = US_Layout::instance();
 
     <div class="slideMenu">
       <div class="close"><i class="fal fa-times"></i></div>
-      <ul><?php get_template_part( 'parts/home', 'menu' ); ?></ul>
+      <ul>
+        <?php get_template_part( 'parts/home', 'menu' ); ?>
+        <li class="break"></li>
+        <li class="ancillary"><a href="/privacy-policy">Privacy Policy</a></li>
+        <li class="ancillary"><a href="/tos">Terms of Service</a></li>
+      </ul>
       <div class="dots"></div>
     </div>
     <div id="nes-canvas" class="l-canvas nes-canvas <?php echo $us_layout->canvas_classes() ?>">
