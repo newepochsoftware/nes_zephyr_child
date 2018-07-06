@@ -186,6 +186,11 @@ $nusku: -7deg;
       font-size: 0.95rem;
       margin-top: 1.5rem;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+      a {
+        font-weight: 700;
+        color: $white;
+      }
     }
   }
 }
