@@ -1,7 +1,7 @@
 <?php
 
 $vDate = date('mdY');
-$vMarker = '1.7.'.$vDate.'.F';
+$vMarker = '1.7.'.$vDate.'.H';
 define('THEME_PATH', get_stylesheet_directory_uri());
 define('LV_VERSION', $vMarker);
 
@@ -11,6 +11,7 @@ define('LV_VERSION', $vMarker);
  */
 function add_nes2018_css(){
   wp_enqueue_style( 'nes2018-custom', THEME_PATH.'/css/custom.css', array(), LV_VERSION, 'all');
+  wp_enqueue_style( 'nes2018-icons', THEME_PATH.'/css/NESIcons.css', array(), LV_VERSION, 'all');
 
   if(is_page_template( 'templates/home_new.php' )){
     wp_dequeue_style( 'us-responsive' );
@@ -18,6 +19,14 @@ function add_nes2018_css(){
   }
 }
 add_action('wp_enqueue_scripts', 'add_nes2018_css', 999);
+
+/**
+ * Hamburger menu CSS animations
+ */
+function add_neatburgers() {
+  wp_enqueue_style( 'neatburgers', THEME_PATH.'/css/hamburgers.min.css', array(), LV_VERSION, 'all' );
+}
+add_action( 'wp_enqueue_scripts', 'add_neatburgers');
 
 /**
  * Primary Animations and JS

@@ -77,45 +77,32 @@ $skew: -15deg;
 
       .menublock{
         text-align: right;
+        position: relative;
 
-        ul {
-          padding: 22px 0;
+        button {
+          box-shadow: initial;
+          appearance: none;
+          -webkit-appearance: none;
+          &.hamburger {
+            position: fixed;
+            z-index: 9999;
+          }
+          
+          .hamburger-box {
+          
+            .hamburger-inner {
+              background-color: $white;
 
-          li {
-            display: inline-block;
-            list-style: none;
-            margin: 0 0 0 2.5rem;
-
-            a {
-              color: $white;
-              font-family: $nesfont;
-              text-transform: uppercase;
-              font-size: 1.15rem;
-
-              &:hover {
-                color: $light-gray;
-                text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+              &:before {
+                background-color: $white;
+              }
+              &:after {
+                background-color: $white;
               }
             }
           }
         }
-        .menuburger {
-          position: fixed;
-          right: 10px;
-          display: none;
-          font-size: 2.5rem;
-          padding-right: 1rem;
-          z-index: 9999;
-          text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
-
-          a {
-            color: #fff;
-          }
-
-          @include breakpoint(small down) {
-            display: block;
-          }
-        }
+        
         .nes_mainmenu {
           
           @include breakpoint(small down) {

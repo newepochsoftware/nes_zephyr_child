@@ -6,7 +6,7 @@
 @include foundation-everything;
 
 /** HOME PAGE TEMPLATE SPECIFIC */
-@import 'slidemenu';
+@import 'platformmenu';
 @import 'homemarquee';
 @import 'formblock';
 @import 'midsection';
@@ -53,6 +53,16 @@ body {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 0.85rem;
+    }
+    .vc_wp_custommenu.layout_hor {
+        
+        ul {
+
+            li {
+                margin: 0;
+                text-align: left;
+            }
+        }
     }
 }
 

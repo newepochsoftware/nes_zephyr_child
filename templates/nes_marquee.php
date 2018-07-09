@@ -22,10 +22,13 @@ $themePath = get_stylesheet_directory_uri();
           <div class="logo"><a href="/" class="homelink"></a></div>
         </div>
         <div class="cell small-6 menublock">
-          <div class="menuburger"><a href="#" id="openmenu"><i class="fal fa-bars"></i></a></div>
-          <ul class="nes_mainmenu">
-            <?php get_template_part( 'parts/home', 'menu' ); ?>
-          </ul>
+
+          <button id="platform-menu" class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
         </div>
       </div>
     </div>

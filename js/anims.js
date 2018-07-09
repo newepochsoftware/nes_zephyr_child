@@ -1,6 +1,7 @@
 var templateUrl = object_name.templateUrl;
 /**
  * Tippy script
+ * Passively looks for elements with 'tipped' class
  */
 tippy('.tipped', {
   delay: 100,
@@ -13,7 +14,8 @@ tippy('.tipped', {
 });
 
 /**
- * Typing effect settings
+ * Typing effect init and settings
+ * Requires element with 'typing' ID
  */
 
 if(document.getElementById('typing')){
@@ -29,12 +31,14 @@ if(document.getElementById('typing')){
 
 /**
  * Particles init
+ * Requires element with 'honeycomb' ID
  */
-particlesJS.load('honeycomb', templateUrl+'/js/nes-particles.json');
+if(document.getElementById('honeycomb')){
+  particlesJS.load('honeycomb', templateUrl+'/js/nes-particles.json');
+}
 
 /** jQuery Encapsulation */
 (function($){
-  //console.log("Custom jQuery Loaded.");
   
   /**
    * Mobile Detection
@@ -53,20 +57,13 @@ particlesJS.load('honeycomb', templateUrl+'/js/nes-particles.json');
   /**
    * Slide Menu animation
    */
-  var menuInit = false;
-  $('#openmenu').on('click', function(e){
-    e.preventDefault();
-
-    if(!menuInit){
-      menuInit = true;
-      $('.fa-bars').animate({opacity: 0});
-      $('#nes-canvas').animate({right: '14rem'}, 500);
-    } else {
-      menuInit = false;
-      $('.fa-bars').animate({opacity: 1});
-      $('#nes-canvas').animate({right: '0rem'}, 500);
-    }
-  });
+  if($('#toggle-platform-menu')){
+    $('#toggle-platform-menu').click('on', function(e){
+      e.preventDefault();
+      $(this).toggleClass('is-active');
+      $('#platform-menu').delay(250).slideToggle(250);
+    });
+  }
 
   /**
    * Smooth Scroll from Request Demo button
