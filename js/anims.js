@@ -58,15 +58,14 @@ if(document.getElementById('honeycomb')){
    * Slide Menu animation
    */
   if($('#toggle-platform-menu')){
+    
     var active = false;
     $('#toggle-platform-menu').click('on', function(e){
+      
       e.preventDefault();
-      //var $pm = $('#platform-menu');
-
       $(this).toggleClass('is-active');
         
       if ( !active ) {
-        console.log('show');
 
         $('#platform-menu').css('display', 'block');
         $('#platform-menu').transition({
@@ -78,7 +77,6 @@ if(document.getElementById('honeycomb')){
 
       } else {
         
-        console.log('hide');
         $('#platform-menu').transition({
             opacity: 0,
             scale: 0.95
@@ -89,6 +87,22 @@ if(document.getElementById('honeycomb')){
         active = false;
 
       }
+
+      $(document).click(function(event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!$(event.target).closest("#platform-menu,#toggle-platform-menu").length) {
+
+          $('#toggle-platform-menu').removeClass('is-active');
+          $('#platform-menu').transition({
+              opacity: 0,
+              scale: 0.95
+            }, 250, function(){
+            $('#platform-menu').css('display', 'none');
+          });
+
+          active = false;
+        }
+      });
 
     });
   }
