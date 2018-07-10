@@ -6,8 +6,8 @@ define('THEME_PATH', get_stylesheet_directory_uri());
 define('LV_VERSION', $vMarker);
 
 /**
- * Primary Custom CSS 
- * 
+ * Primary Custom CSS (including icon font)
+ * Icon font generated at https://glyphter.com/
  */
 function add_nes2018_css(){
   wp_enqueue_style( 'nes2018-custom', THEME_PATH.'/css/custom.css', array(), LV_VERSION, 'all');
@@ -78,6 +78,7 @@ add_action( 'wp_enqueue_scripts', 'add_typing', 13 );
 
 /**
  * Particles Script
+ * https://vincentgarreau.com/particles.js/
  */
 function add_particles() {
   wp_enqueue_script( 'particles-script', THEME_PATH.'/js/particles.min.js', array(), LV_VERSION, true );

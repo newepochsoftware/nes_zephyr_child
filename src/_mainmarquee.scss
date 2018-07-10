@@ -137,12 +137,15 @@ $skew: -5deg;
           
             .hamburger-inner {
               background-color: $white;
+              box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
 
               &:before {
                 background-color: $white;
+                box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
               }
               &:after {
                 background-color: $white;
+                box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
               }
 
               @include breakpoint(small down) {
