@@ -9,6 +9,7 @@ $us_layout = US_Layout::instance();
 <html class="<?php echo $us_layout->html_classes() ?>" <?php language_attributes( 'html' ) ?>>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-87DrmpqHRiY8hPLIr7ByqhPIywuSsjuQAfMXAE0sMUpY3BM7nXjf+mLIUSvhDArs" crossorigin="anonymous">
 
 		<?php wp_head() ?> 
 

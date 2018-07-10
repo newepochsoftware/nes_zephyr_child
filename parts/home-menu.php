@@ -10,3 +10,7 @@ wp_nav_menu(
   )
 );
 ?>
+
+<a href="https://leadverified.com/" class="sign-in-link">
+  Sign In <i class="far fa-arrow-right"></i>
+</a>

@@ -114,27 +114,49 @@ $skew: -5deg;
           &.hamburger {
             position: fixed;
             z-index: 9999;
-            right: 0;
-            top: 20px;
+
+            &.is-active {
+              .hamburger-inner {
+                background-color: $dark-gray;
+                &:before {
+                  background-color: $dark-gray;
+                }
+                &:after {
+                  background-color: $dark-gray;
+                }
+              }
+            }
+
+            @include breakpoint(small down) {
+              right: 0;
+              top: 20px;
+            }
           }
           
           .hamburger-box {
           
             .hamburger-inner {
               background-color: $white;
-              box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
 
               &:before {
                 background-color: $white;
-                box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
               }
               &:after {
                 background-color: $white;
+              }
+
+              @include breakpoint(small down) {
                 box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+                &:before {
+                  box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+                }
+                &:after {
+                  box-shadow: 2px 2px 0px rgba(0,0,0,0.15);
+                }
               }
             }
           }
-        }      
+        }
       }
 
       @include breakpoint(small down){
