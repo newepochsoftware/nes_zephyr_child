@@ -35,6 +35,12 @@ body {
         position: relative;
         background-color: #fff;
     }
+
+    .w-toplink {
+        &.active {
+            bottom: 40px;
+        }
+    }
 }
 
 .l-footer {
