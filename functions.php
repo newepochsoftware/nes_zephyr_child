@@ -22,6 +22,7 @@ add_action('wp_enqueue_scripts', 'add_nes2018_css', 999);
 
 /**
  * Hamburger menu CSS animations
+ * https://jonsuh.com/hamburgers/
  */
 function add_neatburgers() {
   wp_enqueue_style( 'neatburgers', THEME_PATH.'/css/hamburgers.min.css', array(), LV_VERSION, 'all' );
@@ -37,6 +38,15 @@ function add_animations(){
   wp_enqueue_script('animations-js', THEME_PATH.'/js/anims.js', array('jquery'), LV_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'add_animations', 999);
+
+/**
+ * jQuery Transit
+ * http://ricostacruz.com/jquery.transit/
+ */
+function add_transit() {
+  wp_enqueue_script( 'transit-scripts', THEME_PATH.'/js/jquery.transit.min.js', array(), LV_VERSION, true );
+}
+add_action( 'wp_enqueue_scripts', 'add_transit', 10);
 
 /**
  * Tooltips

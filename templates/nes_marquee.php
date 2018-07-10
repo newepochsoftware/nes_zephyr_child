@@ -23,7 +23,7 @@ $themePath = get_stylesheet_directory_uri();
         </div>
         <div class="cell small-6 menublock">
 
-          <button id="platform-menu" class="hamburger hamburger--spin" type="button">
+          <button id="platform-menu" class="hamburger hamburger--boring" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>

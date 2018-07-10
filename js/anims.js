@@ -58,10 +58,38 @@ if(document.getElementById('honeycomb')){
    * Slide Menu animation
    */
   if($('#toggle-platform-menu')){
+    var active = false;
     $('#toggle-platform-menu').click('on', function(e){
       e.preventDefault();
+      //var $pm = $('#platform-menu');
+
       $(this).toggleClass('is-active');
-      $('#platform-menu').delay(250).slideToggle(250);
+        
+      if ( !active ) {
+        console.log('show');
+
+        $('#platform-menu').css('display', 'block');
+        $('#platform-menu').transition({
+          opacity: 1,
+          scale: 1
+        }, 250);
+
+        active = true;
+
+      } else {
+        
+        console.log('hide');
+        $('#platform-menu').transition({
+            opacity: 0,
+            scale: 0.95
+          }, 250, function(){
+          $('#platform-menu').css('display', 'none');
+        });
+
+        active = false;
+
+      }
+
     });
   }
 
@@ -79,18 +107,6 @@ if(document.getElementById('honeycomb')){
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({scrollTop: target.offset().top}, 2000, 'easeInOutExpo', function() {
-          // Callback after animation
-          // Must change focus!
-          /*
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-          */
         });
       }
     }
