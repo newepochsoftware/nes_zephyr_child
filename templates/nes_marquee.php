@@ -17,6 +17,11 @@ $themePath = get_stylesheet_directory_uri();
 
   <div class="nes_menu">
     <div class="grid-container">
+      
+      <div class="platform-menu" id="platform-menu">
+        <?php get_template_part( 'parts/home', 'menu' ); ?>
+      </div>
+
       <div class="grid-x logo-grid">
         <div class="cell small-6">
           <div class="logo"><a href="/" class="homelink"></a></div>
