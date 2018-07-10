@@ -37,7 +37,7 @@
           </tr>
         </table>
 
-        <script src="https://cdn.ywxi.net/js/inline.js?t=103"></script>
+        <script src="https://cdn.ywxi.net/js/inline.js?w=120"></script>
       </div>
     </div>
 
