@@ -40,6 +40,7 @@
             </table>
           </div>
           <div class="cell small-6 text-center">
+            <br>
             <script src="https://cdn.ywxi.net/js/inline.js?w=120"></script>
           </div>
         </div>        
