@@ -16,6 +16,7 @@ $themePath = get_stylesheet_directory_uri();
   </div>
 
   <div class="grid-container">
+    
     <div class="platform-menu" id="platform-menu">
       <?php get_template_part( 'parts/home', 'menu' ); ?>
     </div>

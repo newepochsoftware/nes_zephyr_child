@@ -4,7 +4,7 @@
   background-color: $white;
   border-radius: 6px;
   z-index: 200;
-  right: 18rem;
+  left: calc(50% - 2rem);
   width: 540px;
   box-shadow: 2px 2px 15px rgba(0,0,0,0.25);
   padding: 1.5rem 2rem;
@@ -13,9 +13,9 @@
   transform-origin: top right;
 
   @include breakpoint(small down) {
-    right: auto;
     width: 95%;
     top: 1.5rem;
+    left: 2%;
   }
 
   .nes_mainmenu {
