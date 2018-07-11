@@ -100,6 +100,8 @@
       &.menu-section-left, &.menu-section-right {
         width: 49%;
         display: inline-block;
+        vertical-align: top;
+        
         a {
           display: none;
         }
