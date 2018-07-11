@@ -1,7 +1,7 @@
 <?php
 
 $vDate = date('mdY');
-$vMarker = '1.7.'.$vDate.'.H';
+$vMarker = '1.7.'.$vDate.'.J';
 define('THEME_PATH', get_stylesheet_directory_uri());
 define('LV_VERSION', $vMarker);
 

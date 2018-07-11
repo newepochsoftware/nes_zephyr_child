@@ -1,14 +1,23 @@
 <?php defined( 'ABSPATH' ) OR die( 'This script cannot be accessed directly.' );
 
 /**
+ * Template Name: Form and Confirmation Page Template
  * The template for displaying THANK YOU pages
  */
 
  /**
   * CHECK FOR REFERRAL URL
-  */
-$entry_id = $_GET['uid'];
-$entry = GFAPI::get_entry( $entry_id );
+	*/
+	
+if(isset($_GET['uid'])) {
+	$entry_id = $_GET['uid'];
+	$entry = GFAPI::get_entry( $entry_id );
+}
+
+if(!$_SESSION['token']){
+	$token = uniqid(mt_rand(), TRUE);
+	$_SESSION['token'] = $token;
+}
 
 
 $us_layout = US_Layout::instance();
