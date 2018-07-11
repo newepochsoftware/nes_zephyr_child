@@ -106,7 +106,7 @@ body {
 
         .vc_column-inner {
             @include breakpoint(small down){
-                padding: 0 1rem;
+                padding: 0;
             }
         }
     }
