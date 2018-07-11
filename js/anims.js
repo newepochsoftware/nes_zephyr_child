@@ -126,6 +126,17 @@ if(document.getElementById('honeycomb')){
     }
   });
 
+  /**
+   * Hide McAfee Badge at bottom of screen
+   */
+  $(window).on("scroll", function() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      $('#mfesecure-ts-image').addClass('make-disappear');
+    } else {
+      $('#mfesecure-ts-image').removeClass('make-disappear');
+    }
+  });
+
 })(jQuery);
 
 /*

@@ -96,8 +96,18 @@ body {
 
         @include breakpoint(small down){
             margin-bottom: 0.5rem;
+
+            /*
+            &:nth-child(even) {
+                margin-bottom: 1rem;
+            }
+            */
         }
     }
+}
+
+.make-disappear {
+    display: none !important;
 }
 
 .copyright_txt {
