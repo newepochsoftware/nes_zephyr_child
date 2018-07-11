@@ -112,7 +112,7 @@ function add_tealium() {
   $event = ($pgSlug == 'thank-you') ? 'form-fill' : $pgSlug.'_view';
 
   $jshtml = "";
-  $jshtml .= "<!-- NEW Tealium -->";
+  $jshtml .= "<!-- Tealium -->";
   $jshtml .= "<script type=\"text/javascript\">\r\n";
   
   $jshtml .= "var utag_data = {\r\n";
@@ -157,7 +157,7 @@ function add_tealium() {
   a.parentNode.insertBefore(d,a);\r
 })();\r\n";
   $jshtml .= "</script>\r\n";
-  $jshtml .= "<!-- NEW Tealium -->";
+  $jshtml .= "<!-- Tealium -->";
 
   echo $jshtml;
 }
