@@ -113,42 +113,49 @@ function add_tealium() {
 
   $jshtml = "";
   $jshtml .= "<!-- NEW Tealium -->";
-  $jshtml .= "<script type=\"text/javascript\">";
+  $jshtml .= "<script type=\"text/javascript\">\r\n";
   
-  $jshtml .= "var utag_data = {";
+  $jshtml .= "var utag_data = {\r\n";
   
-    $jshtml .= '"country_code" : "us",';
-    $jshtml .= '"language_code" : "en",';
+    $jshtml .= "\"country_code\" : \"us\",\r\n";
+    $jshtml .= "\"language_code\" : \"en\",\r\n";
 
     if($event == 'form-fill' && $_GET['uid']) {
+      $entry_id = $_GET['uid'];
+      $entry = GFAPI::get_entry( $entry_id );
 
       if (isset($_GET['debug'])){
         print_r($entry);
       }
 
-      $entry_id = $_GET['uid'];
-      $entry = GFAPI::get_entry( $entry_id );
-      $jshtml .= '"customer_email" : "'.$entry["6"].'",
-                  "customer_first_name" : "'.$entry["2"].'",
-                  "customer_last_name" : "'.$entry["8"].'",
-                  "customer_phone" : "'.$entry["4"].'",';
+      $jshtml .= "\"customer_email\" : \"".$entry["6"]."\",\r\n";
+      $jshtml .= "\"customer_first_name\" : \"".$entry["2"]."\",\r\n";
+      $jshtml .= "\"customer_last_name\" : \"".$entry["8"]."\",\r\n";
+      $jshtml .= "\"customer_phone\" : \"".$entry["4"]."\",\r\n";
     }
 
-    $jshtml .= '"page_name" : "' .$pgTitle. '",';
-    $jshtml .= '"site_section" : "' .$pgSlug. '",';
-    $jshtml .= '"tealium_event" : "'.$event.'"';
+    $jshtml .= "\"page_name\" : \"" .$pgTitle. "\",\r\n";
+    $jshtml .= "\"site_section\" : \"" .$pgSlug. "\",\r\n";
+    $jshtml .= "\"tealium_event\" : \"".$event."\"\r\n";
 
-  $jshtml .= "}";
+  $jshtml .= "}\r\n";
 
-  $jshtml .= "</script>";
+  $jshtml .= "</script>\r\n";
 
-  $jshtml .= "<!-- Loading script asynchronously -->";
-  $jshtml .= "<script type=\"text/javascript\">";
-  $jshtml .= "(function(a,b,c,d){a='//tags.tiqcdn.com/utag/epochsoftware/main/prod/utag.js';
-              b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-              a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-              })();";
-  $jshtml .= "</script>";
+  $jshtml .= "<!-- Loading script asynchronously -->\r\n";
+  $jshtml .= "<script type=\"text/javascript\">\r\n";
+  $jshtml .= "(function(a,b,c,d){\r
+  a='//tags.tiqcdn.com/utag/epochsoftware/main/prod/utag.js';\r
+  b=document;\r
+  c='script';\r
+  d=b.createElement(c);\r
+  d.src=a;\r
+  d.type='text/java'+c;\r
+  d.async=true;\r
+  a=b.getElementsByTagName(c)[0];\r
+  a.parentNode.insertBefore(d,a);\r
+})();\r\n";
+  $jshtml .= "</script>\r\n";
   $jshtml .= "<!-- NEW Tealium -->";
 
   echo $jshtml;
