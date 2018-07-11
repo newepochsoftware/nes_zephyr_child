@@ -162,13 +162,3 @@ function add_tealium() {
   echo $jshtml;
 }
 add_action('after_body', 'add_tealium', 999);
-
-/*
-var utag_data = {
-	"customer_email": "",
-	"customer_first_name": "",
-  "customer_last_name": "",
-	"customer_phone": "",
-	"tealium_event": "" // Content type home-view or section-view or form-fill
-  };
-  */
