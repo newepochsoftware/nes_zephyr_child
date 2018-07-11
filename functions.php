@@ -122,10 +122,6 @@ function add_tealium() {
 
     if($event == 'form-fill' && $_GET['uid']) {
 
-      if (isset($_GET['debug'])){
-        print_r($entry);
-      }
-
       $entry_id = $_GET['uid'];
       $entry = GFAPI::get_entry( $entry_id );
       $jshtml .= '"customer_email" : "'.$entry["6"].'",
