@@ -122,7 +122,7 @@ function add_tealium() {
 
     if($event == 'form-fill' && $_GET['uid']) {
 
-      if (isset($_GET['debug']){
+      if (isset($_GET['debug'])){
         print_r($entry);
       }
 
