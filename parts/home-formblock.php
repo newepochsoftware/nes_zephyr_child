@@ -1,5 +1,6 @@
 <?php 
 
+$themePath = get_stylesheet_directory_uri();
 ?>
 
 <!-- Form Row -->
@@ -22,8 +23,37 @@
         
       </div>
       <div class="cell small-12 medium-6">
-        <?php echo do_shortcode( '[gravityform id="3" title="false" description="false"]' ); ?>
-        <p class="disclaimer">By submitting this form, I agree by electronic signature to: (1) be contacted by SMS text at my mobile phone number and by email (Consent is not required as a condition of purchase); (2) <a href="/privacy-policy">Privacy Policy</a>; and (3) <a href="/tos">Terms of Service</a>.</p>
+        <?php if (isset($_GET['GML2018'])): ?>
+          <!-- ALT LAYOUT -->
+          <div class="free_trial">
+            <h5 class="trial">EXCLUSIVE TRIAL FOR ATTENDEES OF</h5>
+            <img src="<?php echo $themePath; ?>/img/google/GML2018.jpg">
+            <h5 class="strike">$199</h5>
+            <h5 class="free">1 MONTH<br>FREE</h5>
+          
+            <ul>
+              <li>Users: 1</li>
+              <li>Campaigns: 3</li>
+              <li>Leads: 1,000/mo</li>
+              <li>Retention: Up to 4 yr.</li>          
+              <li>Price per certificate: $0.20</li>
+            </ul>
+
+            <div class="startnow">
+              <a href="https://newepochsoftware.recurly.com/subscribe/lv-beta" target="_blank">
+                <span>Start Free Trial Now</span>
+              </a>
+            </div>
+          </div>
+          <!-- ALT LAYOUT -->
+        <?php 
+          else: 
+            echo do_shortcode( '[gravityform id="3" title="false" description="false"]' ); 
+        ?>
+        
+          <p class="disclaimer">By submitting this form, I agree by electronic signature to: (1) be contacted by SMS text at my mobile phone number and by email (Consent is not required as a condition of purchase); (2) <a href="/privacy-policy">Privacy Policy</a>; and (3) <a href="/tos">Terms of Service</a>.</p>
+        
+        <?php endif; ?>
         
         <div class="grid-x">
           <div class="cell small-6 text-center">
@@ -31,10 +61,6 @@
               <tr>
                 <td width="135" align="center" valign="top">
                   <script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.newepochsoftware.com&amp;size=M&amp;use_flash=NO&amp;use_transparent=Yes&amp;lang=en"></script>
-                  <!--
-                  <br />
-                  <a href="https://www.websecurity.symantec.com/ssl-certificate" target="_blank"  style="color:#000000; text-decoration:none; font:bold 10px verdana,sans-serif; letter-spacing:.5px;text-align:center; margin:0px; padding:0px;"> ABOUT SSL CERTIFICATES</a>
-                  -->
                 </td>
               </tr>
             </table>

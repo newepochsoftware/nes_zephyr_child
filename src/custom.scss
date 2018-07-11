@@ -49,15 +49,15 @@ body {
 
 .l-footer {
     .color_footer-bottom {
-        background-color: $blue !important;
+        background-color: $light-gray !important;
         a {
-            color: $white;
+            color: $dark-gray;
             text-transform: uppercase;
             padding: 3px 1rem;
         }
     }
     .l-section.height_small>.l-section-h {
-        color: $white;
+        color: $dark-gray;
         padding: 1rem 0;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
