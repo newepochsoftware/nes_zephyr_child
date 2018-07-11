@@ -146,7 +146,7 @@ function add_tealium() {
   $jshtml .= "<!-- Loading script asynchronously -->\r\n";
   $jshtml .= "<script type=\"text/javascript\">\r\n";
   $jshtml .= "(function(a,b,c,d){\r
-  a='//tags.tiqcdn.com/utag/epochsoftware/main/prod/utag.js';\r
+  a='//tags.tiqcdn.com/utag/newepoch/main/prod/utag.js';\r
   b=document;\r
   c='script';\r
   d=b.createElement(c);\r
