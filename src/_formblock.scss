@@ -6,6 +6,9 @@ $nusku: -7deg;
   margin: 0;
   color: $white;
 
+  &.GML2018 {
+    margin-bottom: -5rem;
+  }
   .angle_10 {
     position: absolute;
     overflow: hidden;
@@ -54,7 +57,7 @@ $nusku: -7deg;
       }
       h3 {
         font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         font-weight: 700;
         line-height: 2.25rem;
         color: $white;
