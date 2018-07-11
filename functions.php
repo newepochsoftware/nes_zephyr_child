@@ -97,3 +97,66 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
+/**
+ * Add Tealium
+ * (supports dynamic data layer mapping for confirmation pages)
+ * 
+ */
+function add_tealium() {
+  
+  $pgID = get_the_ID();
+  $pgTitle = get_the_title( $pgID );
+  $pgURL = get_permalink( $pgID );
+  $pgSlug = get_post_field( 'post_name', $pgID );
+
+  $event = ($pgSlug == 'thank-you') ? 'form-fill' : $pgSlug.'_view';
+
+  $jshtml = "";
+  $jshtml .= "<!-- NEW Tealium -->";
+  $jshtml .= "<script type=\"text/javascript\">";
+  
+  $jshtml .= "var utag_data = {";
+  
+    $jshtml .= '"country_code" : "us",';
+    $jshtml .= '"language_code" : "en",';
+
+    if($event == 'form-fill' && $_GET['uid']) {
+
+      $entry_id = $_GET['uid'];
+      $entry = GFAPI::get_entry( $entry_id );
+      $jshtml .= '"customer_email" : "'.$entry["6"].'",
+                  "customer_first_name" : "'.$entry["2"].'",
+                  "customer_last_name" : "'.$entry["8"].'",
+                  "customer_phone" : "'.$entry["4"].'",';
+    }
+
+    $jshtml .= '"page_name" : "' .$pgTitle. '",';
+    $jshtml .= '"site_section" : "' .$pgSlug. '",';
+    $jshtml .= '"tealium_event" : "'.$event.'"';
+
+  $jshtml .= "}";
+
+  $jshtml .= "</script>";
+
+  $jshtml .= "<!-- Loading script asynchronously -->";
+  $jshtml .= "<script type=\"text/javascript\">";
+  $jshtml .= "(function(a,b,c,d){a='//tags.tiqcdn.com/utag/epochsoftware/main/prod/utag.js';
+              b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+              a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+              })();";
+  $jshtml .= "</script>";
+  $jshtml .= "<!-- NEW Tealium -->";
+
+  echo $jshtml;
+}
+add_action('after_body', 'add_tealium', 999);
+
+/*
+var utag_data = {
+	"customer_email": "",
+	"customer_first_name": "",
+  "customer_last_name": "",
+	"customer_phone": "",
+	"tealium_event": "" // Content type home-view or section-view or form-fill
+  };
+  */
