@@ -26,13 +26,11 @@ $themePath = get_stylesheet_directory_uri();
         <div class="logo"><a href="/" class="homelink"></a></div>
       </div>
       <div class="cell small-6 menublock">
-    
         <button id="toggle-platform-menu" class="hamburger hamburger--boring" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
-
       </div>
     </div>
     <div class="grid-x">

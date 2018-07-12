@@ -74,5 +74,5 @@ $us_layout = US_Layout::instance();
 
     <div id="nes-canvas" class="l-canvas nes-canvas <?php echo $us_layout->canvas_classes() ?>">
       <?php if ( $us_layout->header_show != 'never' ): ?>
-        <?php us_load_template( 'templates/marquee' ) ?>
+        <?php us_load_template( 'templates/home_marquee' ) ?>
       <?php endif; ?>

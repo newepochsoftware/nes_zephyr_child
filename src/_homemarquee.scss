@@ -168,7 +168,10 @@ $skew: -15deg;
     .typing {
       font-weight: 700;
       text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
-      font-size: 1.75rem;
+      font-size: 2.35rem;
+      @include breakpoint(small down){
+        font-size: 1.75rem;
+      }
     }
 
     @include breakpoint(small down){
