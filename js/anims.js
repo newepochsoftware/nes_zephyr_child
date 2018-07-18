@@ -50,9 +50,26 @@ if(document.getElementById('honeycomb')){
   /**
    * Animate on Scroll settings
    */
-  AOS.init({
+  var aossettings = {
     offset: offsetValue,
-    duration: 750
+    duration: 750,
+    once: true,
+    disable: (md.mobile()) ? true : false
+  }
+  AOS.init(aossettings);
+
+  /**
+   * Orientation Change
+   */
+  $(window).resize(function(){
+    if(window.innerHeight > window.innerWidth){
+      //portrait
+      console.log('portrait');
+    }
+    if(window.innerWidth > window.innerHeight && md.mobile()){
+      //landscape
+      console.log('landscape');
+    }
   });
 
   /**
