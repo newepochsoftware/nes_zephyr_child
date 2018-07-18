@@ -88,6 +88,7 @@ $skew: -5deg;
 
       .logo {
         position: relative;
+        z-index: -1;
         background-image: url('../img/NES_LogoAlt_whiteKnockout.png');
         background-size: contain;
         background-position: center center;
