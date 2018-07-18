@@ -20,12 +20,12 @@ $themePath = get_stylesheet_directory_uri();
     <div class="platform-menu" id="platform-menu">
       <?php get_template_part( 'parts/home', 'menu' ); ?>
     </div>
-
-    <div class="grid-x logo-grid">
-      <div class="cell small-6">
+    
+    <div class="grid-x logo-grid navbar" id="navbar">
+      <div class="cell small-6 large-6">
         <div class="logo"><a href="/" class="homelink"></a></div>
       </div>
-      <div class="cell small-6 menublock">
+      <div class="cell small-6 large-6 menublock">
         <button id="toggle-platform-menu" class="hamburger hamburger--boring" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -33,8 +33,9 @@ $themePath = get_stylesheet_directory_uri();
         </button>
       </div>
     </div>
-    <div class="grid-x">
-      <div class="cell small-12 medium-8">
+
+    <div class="grid-x marquee-content">
+      <div class="cell small-12 medium-9 large-9">
         <h1>Lead Verified is your solution for<br> <span id="typing" class="typing"></span></h1>
         <p>Lead Verified provides visit history, archival, data recovery, and authenticity certificates for your webleads and user-generated content. We process thousands of leads per day so our clients can buy, sell, and integrate leads while supporting <span class="hilite">TCPA</span>, <span class="hilite">GDPR</span>, and <span class="hilite">MiFID</span> compliance requirements.</p>
         
@@ -72,7 +73,7 @@ $themePath = get_stylesheet_directory_uri();
         <!-- Trusted Grid -->
 
       </div>
-      <div class="cell small-12 medium-4 hide-for-small-only">
+      <div class="cell small-12 medium-3 large-3 hide-for-small-only">
         <div class="tablet"></div>
       </div>
     </div>

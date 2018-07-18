@@ -39,12 +39,13 @@ if(document.getElementById('honeycomb')){
 
 /** jQuery Encapsulation */
 (function($){
-  
+
   /**
    * Mobile Detection
    */
   var md = new MobileDetect(window.navigator.userAgent);
   var offsetValue = (md.mobile()) ? 100 : 500;
+  $('#nes-canvas').addClass('ismobile');
   
   /**
    * Animate on Scroll settings
@@ -127,14 +128,19 @@ if(document.getElementById('honeycomb')){
   });
 
   /**
-   * Hide McAfee Badge at bottom of screen
+   * Scroll functions
    */
   $(window).on("scroll", function() {
+
+    /**
+     * Hide McAfee Badge at bottom of screen
+     */
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       $('#mfesecure-ts-image').addClass('make-disappear');
     } else {
       $('#mfesecure-ts-image').removeClass('make-disappear');
     }
+
   });
 
 })(jQuery);

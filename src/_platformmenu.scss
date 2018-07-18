@@ -1,10 +1,10 @@
 .platform-menu {
-  position: fixed;
+  position: absolute;
   opacity: 0;
   background-color: $white;
   border-radius: 6px;
-  z-index: 200;
-  left: calc(50% - 2rem);
+  z-index: 0;
+  left: calc(50% - 90px);
   width: 540px;
   box-shadow: 2px 2px 15px rgba(0,0,0,0.25);
   padding: 1.5rem 2rem;
@@ -12,10 +12,13 @@
   transform: scale(0.95);
   transform-origin: top right;
 
+  @include breakpoint(medium down) {
+    left: calc(50% - 170px);
+  }
   @include breakpoint(small down) {
-    width: 95%;
-    top: 1.5rem;
-    left: 2%;
+    width: 98%;
+    top: 0.25rem;
+    left: 1%;
   }
 
   .nes_mainmenu {
@@ -55,6 +58,11 @@
 
               a {
                 color: $orange;
+              }
+
+              @include breakpoint(small down) {
+                margin-left: -10px;
+                padding-left: 10px;
               }
             }
           }
@@ -101,7 +109,7 @@
         width: 49%;
         display: inline-block;
         vertical-align: top;
-        
+
         a {
           display: none;
         }

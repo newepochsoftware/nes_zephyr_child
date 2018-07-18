@@ -46,6 +46,9 @@ $skew: -15deg;
       }
     }
 
+    @include breakpoint(medium down){
+      height: 60rem;
+    }
     @include breakpoint(small down){
       height: 60rem;
     }
@@ -55,12 +58,18 @@ $skew: -15deg;
     position: relative;
     z-index: 10000;
     padding-top: 4rem;
+    
+    .marquee-content {
+      position: relative;
+      z-index: -1;
+    }
 
     .logo-grid {
       margin-bottom: 5rem;
 
       .logo {
         position: relative;
+        z-index: -1;
         background-image: url('../img/NES_LogoAlt_whiteKnockout.png');
         background-size: contain;
         background-position: center center;
@@ -75,6 +84,9 @@ $skew: -15deg;
         }
       }
 
+      /** 
+      * Menu Button
+      */
       .menublock{
         text-align: right;
         position: relative;
@@ -83,8 +95,10 @@ $skew: -15deg;
           box-shadow: initial;
           appearance: none;
           -webkit-appearance: none;
+          
           &.hamburger {
-            position: fixed;
+            position: absolute;
+            right: 0px;
             z-index: 9999;
 
             &.is-active {
@@ -100,8 +114,8 @@ $skew: -15deg;
             }
 
             @include breakpoint(small down) {
-              right: 0;
-              top: 20px;
+              right: 3px;
+              top: 6px;
             }
           }
           
@@ -141,11 +155,17 @@ $skew: -15deg;
         }
       }
 
+      @include breakpoint(medium down){
+        margin-bottom: 3rem;
+      }
       @include breakpoint(small down){
         margin-bottom: 3rem;
       }
     }
 
+    @include breakpoint(medium down){
+      padding-top: 2rem;
+    }
     @include breakpoint(small down){
       padding-top: 1rem;
     }
@@ -169,11 +189,16 @@ $skew: -15deg;
       font-weight: 700;
       text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
       font-size: 2.35rem;
+      @include breakpoint(medium down){
+        font-size: 4.35vw;
+      }
       @include breakpoint(small down){
         font-size: 1.75rem;
       }
     }
-
+    @include breakpoint(medium down){
+      font-size: 4.35vw;
+    }
     @include breakpoint(small down){
       font-size: 1.5rem;
       line-height: 2.25rem;
@@ -192,7 +217,9 @@ $skew: -15deg;
       font-weight: 700;
       text-shadow: 2px 2px 0px rgba(0,0,0,0.15);
     }
-
+    @include breakpoint(medium down){
+      font-size: 1.25rem;
+    }
     @include breakpoint(small down){
       font-size: 1.125rem;
       line-height: 2rem;
@@ -277,6 +304,9 @@ $skew: -15deg;
       text-align: center;
     }
 
+    @include breakpoint(medium down){
+      width: 85%;
+    }
     @include breakpoint(small down){
       width: 100%;
       padding: 0 1rem;
@@ -288,6 +318,7 @@ $skew: -15deg;
 
     .tablet {
       position: absolute;
+      z-index: -1;
       background-size: contain;
       background-image: url('../img/devices/marquee@2x.png');
       background-repeat: no-repeat;
@@ -297,6 +328,23 @@ $skew: -15deg;
       left: 3rem;
       transform: rotate($skew);
       filter: drop-shadow(10px 15px 0px rgba(0,0,0,0.15));
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) and (orientation: landscape) { 
+  .ismobile {
+    .marquee {
+      .angle_1 {
+        height: 60rem;
+      }
+      .grid-container {
+        padding-top: 2rem;
+
+        .logo-grid {
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 }

@@ -84,6 +84,10 @@ $skew: -15deg;
 
     .cell {
       padding: 0 .9375rem;
+
+      @include breakpoint(medium down){
+        padding: 0 .5rem;
+      }
     }
     h3 {
       margin: 2rem 0 4rem;
@@ -146,7 +150,7 @@ $skew: -15deg;
     position: relative;
     z-index: 9;
     padding: 6rem 0;
-    margin: 6rem auto 4rem;
+    margin: 4rem auto;
     overflow: hidden;
     background: $orange;
     background:    -moz-linear-gradient(top, rgba(214,89,62,1) 0%, rgba(248,143,65,1) 100%);
@@ -351,6 +355,18 @@ $skew: -15deg;
 
     @include breakpoint(small down){
       margin-bottom: 12rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) and (orientation: landscape) { 
+  .ismobile {
+    .midsection {
+      .google-block {
+        li {
+          font-size: 1.35rem;
+        }
+      }
     }
   }
 }

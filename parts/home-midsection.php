@@ -16,7 +16,7 @@ $themePath = get_stylesheet_directory_uri();
         <div class="g-partnersbadge" data-agency-id="9915561239"></div>
         <h3>We are a google premier partner</h3>
       </div>
-      <div class="cell small-12 medium-6 small-order-2 medium-order-1">
+      <div class="cell small-12 medium-7 large-6 small-order-2 medium-order-1">
         <ul>
           <li><i class="fas fa-check-circle"></i> We follow Google's best practices</li>
           <li><i class="fas fa-check-circle"></i> We are Google Ads certified</li>
@@ -24,7 +24,7 @@ $themePath = get_stylesheet_directory_uri();
           <li><i class="fas fa-check-circle"></i> We help businesses succeed online</li>
         </ul>
       </div>
-      <div class="cell small-12 medium-6 small-order-1 medium-order-2">
+      <div class="cell small-12 medium-5 large-6 small-order-1 medium-order-2">
         <div class="grid-x google-grid">
           <div class="cell auto"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/searchwords.svg" title="Adwords"></div>
           <div class="cell auto"><img class="googleicons tipped" src="<?php echo $themePath; ?>/img/google/Display.svg" title="Display"></div>

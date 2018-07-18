@@ -112,7 +112,8 @@ $skew: -5deg;
           appearance: none;
           -webkit-appearance: none;
           &.hamburger {
-            position: fixed;
+            position: absolute;
+            right: 0px;
             z-index: 9999;
 
             &.is-active {
@@ -128,8 +129,8 @@ $skew: -5deg;
             }
 
             @include breakpoint(small down) {
-              right: 0;
-              top: 20px;
+              right: 3px;
+              top: 6px;
             }
           }
           

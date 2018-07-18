@@ -12,5 +12,5 @@ wp_nav_menu(
 ?>
 
 <a target="_blank" href="https://leadverified.com/" class="sign-in-link">
-  Sign In <i class="far fa-arrow-right"></i>
+  Sign In <i class="far fa-sign-in-alt"></i>
 </a>
