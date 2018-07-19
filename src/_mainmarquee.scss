@@ -174,3 +174,16 @@ $skew: -5deg;
     }
   }
 }
+@media only screen and (max-width: 900px) and (orientation: landscape) { 
+  .ismobile {
+    .nes_marquee {
+      .grid-container {
+        padding-top: 2rem;
+
+        .logo-grid {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
