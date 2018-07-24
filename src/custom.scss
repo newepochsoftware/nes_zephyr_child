@@ -105,12 +105,6 @@ body {
 
         @include breakpoint(small down){
             margin-bottom: 0.5rem;
-
-            /*
-            &:nth-child(even) {
-                margin-bottom: 1rem;
-            }
-            */
         }
 
         .vc_column-inner {

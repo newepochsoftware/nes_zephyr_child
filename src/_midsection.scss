@@ -150,7 +150,7 @@ $skew: -15deg;
     position: relative;
     z-index: 9;
     padding: 6rem 0;
-    margin: 4rem auto;
+    margin: 4rem auto 0;
     overflow: hidden;
     background: $orange;
     background:    -moz-linear-gradient(top, rgba(214,89,62,1) 0%, rgba(248,143,65,1) 100%);
@@ -159,7 +159,6 @@ $skew: -15deg;
 
     .honeycomb {
       position: absolute;
-      /*background: url('../img/NES_honeycomb@2x.png');*/
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
@@ -190,7 +189,7 @@ $skew: -15deg;
       vertical-align: middle;
 
       @include breakpoint(899px down) {
-        font-size: 1.75rem;
+        font-size: 1.65rem;
       }
     }
     p {
@@ -226,16 +225,19 @@ $skew: -15deg;
     }
   }
 
+  /**
+  * "FINGERPRINT" Section
+  */
   .fingerprint {
     position: relative;
-    margin-bottom: 22rem;
+    margin-bottom: 0rem;
 
     .spinner {
       position: absolute;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       width: 500px;
       height: 500px;
-      top: -9rem;
+      top: 50%;
       left: 50%;
       z-index: 1;
 
@@ -310,7 +312,7 @@ $skew: -15deg;
       }
 
       @include breakpoint(small down){
-        top: -71px;
+        transform: translate(-50%, -60%);
       }
     }
 
@@ -318,17 +320,43 @@ $skew: -15deg;
       position: relative;
       width: 100%;
       z-index: 5;
+      padding: 6rem 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 
       i, h4 {
         color: $white;
       }
       h4 {
         font-size: 1.35rem;
-        margin: 1rem auto;
+        margin: 6rem auto 0;
+        
+        @include breakpoint(medium down){
+          font-size: 1.35rem;
+          margin: 5rem auto 0;
+        }
+        @include breakpoint(small down){
+          font-size: 1.35rem;
+          margin: 3rem auto 0;
+        }
       }
       p {
-        margin-top: 11rem;
+        margin-top: 10rem;
         color: $white;
+        @include breakpoint(medium down){
+          padding: 0 3rem;
+        }
+        @include breakpoint(small down){
+          padding: 0 1rem;
+          font-size: 1.25rem;
+          margin-top: 15rem;
+        }
+      }
+
+      @include breakpoint(medium down){
+        padding: 4rem 0;
+      }
+      @include breakpoint(small down){
+        padding: 0;
       }
     }
 
@@ -336,9 +364,9 @@ $skew: -15deg;
       content: '';
       position: absolute;
       z-index: 0;
-      top: -20rem;
-      transform: skewY(10deg);
-      height: 50rem;
+      top: 0rem;
+      /*transform: skewY(10deg);*/
+      height: 40rem;
       width: 100%;
       background: rgb(205,205,205);
       background:    -moz-linear-gradient(top, rgba(27,168,236,1) 0%, rgba(123,101,250,1) 100%);
@@ -354,7 +382,7 @@ $skew: -15deg;
     }
 
     @include breakpoint(small down){
-      margin-bottom: 12rem;
+      margin-bottom: 2rem;
     }
   }
 }

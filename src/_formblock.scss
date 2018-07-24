@@ -39,7 +39,7 @@ $nusku: -7deg;
   }
 
   @include breakpoint(small down){
-    margin-top: 8rem;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -64,7 +64,7 @@ $nusku: -7deg;
         margin: 4rem 0;
 
         @include breakpoint(small down){
-          margin: 2rem 0;
+          margin: 4rem 0 2rem;
         }
       }
     }

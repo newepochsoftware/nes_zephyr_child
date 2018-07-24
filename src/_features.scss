@@ -14,8 +14,9 @@
     height: 65rem;
     left: -25rem;
     bottom: 21rem;
-    z-index: 20;
-    opacity: 0.5;
+    z-index: -1;
+    opacity: 0.25;
+    filter: blur(1px);
 
     @include breakpoint(small down){
       bottom: 78rem;
@@ -58,23 +59,30 @@
 
   .feature-row {
     margin: 8rem auto;
+    position: relative;
 
     &:nth-child(even):before {
       content: '';
       position: absolute;
       overflow: hidden;
       z-index: -1;
+      top: 50%;
       left: 50%;
-      height: 40rem;
-      width: 100%;
-      -webkit-transform: translateX(-50%) skewY($nusku);
-      transform: translateX(-50%) skewY($nusku);
-      -webkit-transform-origin: 0;
-      transform-origin: 0;
+      height: calc(100% + 7rem);
+      width: 400%;
+      transform: translate(-50%, -52.5%) skewY($nusku);
+      transform-origin: center center;
       background: rgb(245,245,245);
 
       @include breakpoint(small down){
-        height: 50rem;
+        transform: translate(-50%, -50%) skewY($nusku);
+      }
+    }
+
+    &:last-child {
+
+      @include breakpoint(small down){
+        margin-bottom: 0;
       }
     }
 

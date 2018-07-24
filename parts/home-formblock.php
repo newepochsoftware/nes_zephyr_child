@@ -1,9 +1,11 @@
 <?php 
+/**
+ * Formblock Section
+ */
 
 $themePath = get_stylesheet_directory_uri();
 ?>
 
-<!-- Form Row -->
 <div class="form-block <?php if (isset($_GET['GML2018'])) echo 'GML2018'; ?>" id="formblock">
   <div class="angle_10">
     <div class="molecules alt"></div>
@@ -76,4 +78,3 @@ $themePath = get_stylesheet_directory_uri();
   </div>
 
 </div>
-<!-- ^^Form Row -->

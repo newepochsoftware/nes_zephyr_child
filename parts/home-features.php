@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Features Section
+ */
 
 $themePath = get_stylesheet_directory_uri();
 ?>

@@ -4,6 +4,8 @@
  * @version LV_VERSION
  */
 
+$plh_args = array();
+
 get_header('2018'); ?>
 
 <?php get_template_part( 'parts/home', 'midsection' ); ?>
