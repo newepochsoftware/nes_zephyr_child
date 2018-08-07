@@ -176,7 +176,7 @@ function add_tealium() {
 
       $jshtml .= "\"customer_email\" : \"".$entry["6"]."\",\r\n";
       $jshtml .= "\"customer_first_name\" : \"".$entry["2"]."\",\r\n";
-      $lastname = (!$entry["8"]) ? $entry["3"] : $entry["8"];
+      $lastname = (!isset($entry["8"])) ? $entry["3"] : $entry["8"];
       $jshtml .= "\"customer_last_name\" : \"".$lastname."\",\r\n";
       $jshtml .= "\"customer_phone\" : \"".$entry["4"]."\",\r\n";
     }
