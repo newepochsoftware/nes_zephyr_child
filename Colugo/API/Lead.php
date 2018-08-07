@@ -34,18 +34,6 @@ class Lead extends APIObject {
     public function getId() {
         return $this->id;
     }
-    
-    public function __load__from__object($object) {
-        parent::__load__from__object($object);
-        $this->fields = $object;
-    }
-    
-    public function __get($name) {
-        if (isset($this->fields->$name)) {
-            return $this->fields->$name;
-        }
-        return null;
-    }
 
     /**
      * sets the id associated with this lead

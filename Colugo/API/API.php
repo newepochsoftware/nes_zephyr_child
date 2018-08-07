@@ -57,19 +57,6 @@ class API {
             $this->uri = self::TEST_CONNECTION_URI;
         }
     }
-    
-    /**
-     * Wrapper for creating a pager object
-     * @param string $objectType
-     * @param int $page
-     * @param int $limitPerPage
-     * @param string $query
-     */
-    public function paginate($objectType, $page = 1, $limitPerPage = 50, $query = []) {
-        $pager = new Pager($objectType, $page, $limitPerPage, $query, $this->mode);
-        $pager->fetch($this);
-        return $pager;
-    }
 
     /**
      * Executes a put request on the API
@@ -151,36 +138,6 @@ class API {
         return $json;
     }
 
-    /**
-     * Executes a delete request on the API
-     * @param string $path
-     * @param type $object
-     * @return string
-     */
-    private function _delete($path, $object, $opts) {
-        $data_json = json_encode($object);
-        $ch = curl_init();
-        if (is_array($opts)) {
-            $query = http_build_query($opts);
-            $path .= "?$query";
-        }
-        curl_setopt($ch, CURLOPT_URL, sprintf("%s%s", $this->uri, $path));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $this->getHeaders(strlen($data_json)));
-        curl_setopt($ch, CURLOPT_USERPWD, sprintf("%s:%s", $this->username, $this->developerKey));
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($ch);
-        // echo "RESPONSE: $response\n";
-        curl_close($ch);
-        $json = json_decode($response);
-        if (is_object($json) && isset($json->exception)) {
-            throw new \Exception($json->exception . ": " . $json->message);
-        }
-        return $json;
-    }
-
     private function getHeaders($len = 0) {
         $header = [];
         $header[] = "Content-Length: $len";
@@ -200,14 +157,6 @@ class API {
             return $object;
         } else {
             throw new \Exception("UnknownObjectTypeException: ".get_class($object));
-        }
-    }
-
-    public function delete($object, $opts = []) {
-        if ($object instanceof \Colugo\API\APIObject) {
-            $data = $this->_delete($object->__putUrl(), $object, $opts);
-        } else {
-            throw new \Exception("UnknownObjectTypeException: " . get_class($object));
         }
     }
     
@@ -251,7 +200,7 @@ class API {
     
     /**
      * Fetches the API's current user
-     * @return \Colugo\API\User
+     * @return \Dynamix\API\User
      */
     public function getUser() {
         return $this->user;
@@ -280,9 +229,6 @@ class API {
                 break;
             case "Colugo\\API\\SchemaField":
                 require_once(__DIR__ . "/SchemaField.php");
-                break;
-            case "Colugo\\API\\Pager":
-                require_once(__DIR__ . "/Pager.php");
                 break;
             default:
                 break;

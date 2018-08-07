@@ -31,19 +31,11 @@ class User {
         $this->token = $token;
     }
     
-    public function getUserPassword() {
-        return sprintf("%s:%s", $this->username, $this->token);
-    }
-    
     public function getUsername() {
         return $this->username;
     }
     
     public function getToken() {
         return $this->token;
-    }
-    
-    public function __toString() {
-        return $this->getUserPassword();
     }
 }
