@@ -101,7 +101,7 @@ add_action( 'init', 'register_my_menu' );
  * Submit form fills to Glowfish
  * 
  */
-add_action( 'gform_after_submission', 'glowfish_my_lead', 10, 2);
+add_action( 'gform_after_submission_3', 'glowfish_my_lead', 10, 2);
 function glowfish_my_lead($entry, $form) {
 
   /**
