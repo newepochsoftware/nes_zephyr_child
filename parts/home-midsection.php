@@ -1,4 +1,7 @@
 <?php
+/**
+ * Midsection content area
+ */
 
 $themePath = get_stylesheet_directory_uri();
 ?>
@@ -6,10 +9,8 @@ $themePath = get_stylesheet_directory_uri();
 <div class="midsection">
   <div class="angle_2"><div class="molecules"></div></div>
 
-  <!-- How It Works Section -->
+  <!-- Google Block -->
   <div class="grid-container howitworks">
-
-    <!-- Google Block -->
     <div class="grid-x google-block">
       <div class="cell small-12 text-center">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -41,9 +42,8 @@ $themePath = get_stylesheet_directory_uri();
         </div>
       </div>
     </div>
-    <!-- Google Block -->
   </div>
-  <!-- How It Works Section -->
+  <!-- Google Block -->
 
   <!-- Easy/Developer Sections -->
   <div class="easy-dev">

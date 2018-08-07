@@ -98,6 +98,52 @@ function register_my_menu() {
 add_action( 'init', 'register_my_menu' );
 
 /**
+ * Submit form fills to Glowfish
+ * 
+ */
+add_action( 'gform_after_submission', 'glowfish_my_lead', 10, 2);
+function glowfish_my_lead($entry, $form) {
+
+  /**
+   * Set API info
+   */
+  $gf_email   = 'michael@newepochsoftware.com';
+  $gf_apikey  = 'k2jKv_1022838621137371982c5dbb17255febdaa3e1cc';
+
+  /**
+   * Set field mapping
+   */
+  $f_name = rgar($entry, '2');
+  $l_name = rgar($entry, '3');
+  $email  = rgar($entry, '4');
+  $phone  = rgar($entry, '6');
+
+  require_once(__DIR__ . "/_inc/Colugo/API/API.php");
+  try {
+    $user = new Colugo\API\User($gf_email, $gf_apikey);
+    $api = new \Colugo\API\API($user);
+    $lead = new \Colugo\API\Lead();
+
+    $lead->setLeadIpAddress($_SERVER["REMOTE_ADDR"]);
+    $lead->setLeadSource("NEW EPOCH");
+    $lead->setFields([
+          "First Name"  => $f_name,
+          "Last Name"   => $l_name,
+          "Email"       => $email,
+          "Work Phone"  => $phone
+          ]);
+
+    $api->post($lead);
+
+  } catch (\Exception $e) {
+    file_put_contents("php://stderr", "COLUGO MAIL ERROR: ".$e->getMessage()."\n");
+    return false;
+  }
+    return true;
+}
+
+
+/**
  * Add Tealium
  * (supports dynamic data layer mapping for confirmation pages)
  * 
