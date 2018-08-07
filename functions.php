@@ -115,8 +115,8 @@ function glowfish_my_lead($entry, $form) {
    */
   $f_name = rgar($entry, '2');
   $l_name = rgar($entry, '3');
-  $email  = rgar($entry, '4');
-  $phone  = rgar($entry, '6');
+  $email  = rgar($entry, '6');
+  $phone  = rgar($entry, '4');
 
   require_once(__DIR__ . "/Colugo/API/API.php");
   try {
@@ -125,12 +125,13 @@ function glowfish_my_lead($entry, $form) {
     $lead = new \Colugo\API\Lead();
 
     $lead->setLeadIpAddress($_SERVER["REMOTE_ADDR"]);
-    $lead->setLeadSource("NEW EPOCH");
+    $lead->setLeadSource("NEWEPOCH");
     $lead->setFields([
           "First Name"  => $f_name,
           "Last Name"   => $l_name,
           "Email"       => $email,
-          "Work Phone"  => $phone
+          "Work Phone"  => $phone,
+          "Profile"     => 'LeadVerified',
           ]);
 
     $api->post($lead);
