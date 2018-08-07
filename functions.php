@@ -133,12 +133,17 @@ function glowfish_my_lead($entry, $form) {
           "Work Phone"  => $phone
           ]);
 
-    $api->post($lead);
+    if($api->post($lead)){
+      exit("success!");
+    } else {
+      exit("FAILURE.");
+    }
 
   } catch (\Exception $e) {
     file_put_contents("php://stderr", "COLUGO MAIL ERROR: ".$e->getMessage()."\n");
     return false;
   }
+
     return true;
 }
 
