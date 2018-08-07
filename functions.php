@@ -119,25 +119,27 @@ function glowfish_my_lead($entry, $form) {
   $phone  = rgar($entry, '6');
 
   require_once(__DIR__ . "/Colugo/API/API.php");
-  
-  $user = new Colugo\API\User($gf_email, $gf_apikey);
-  $api = new \Colugo\API\API($user);
-  $lead = new \Colugo\API\Lead();
+  try {
+    $user = new Colugo\API\User($gf_email, $gf_apikey);
+    $api = new \Colugo\API\API($user);
+    $lead = new \Colugo\API\Lead();
 
-  $lead->setLeadIpAddress($_SERVER["REMOTE_ADDR"]);
-  $lead->setLeadSource("NEW EPOCH");
-  $lead->setFields([
-        "First Name"  => $f_name,
-        "Last Name"   => $l_name,
-        "Email"       => $email,
-        "Work Phone"  => $phone
-        ]);
+    $lead->setLeadIpAddress($_SERVER["REMOTE_ADDR"]);
+    $lead->setLeadSource("NEW EPOCH");
+    $lead->setFields([
+          "First Name"  => $f_name,
+          "Last Name"   => $l_name,
+          "Email"       => $email,
+          "Work Phone"  => $phone
+          ]);
 
-  if($api->post($lead)){
-    exit("success!");
-  } else {
-    exit("FAILURE.");
+    $api->post($lead);
+
+  } catch (\Exception $e) {
+    file_put_contents("php://stderr", "COLUGO MAIL ERROR: ".$e->getMessage()."\n");
+    return false;
   }
+    return true;
 }
 
 
