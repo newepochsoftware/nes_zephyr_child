@@ -8,7 +8,11 @@ $plh_args = array();
 
 get_header('2018'); ?>
 
-<?php get_template_part( 'parts/home', 'midsection' ); ?>
+<?php 
+if(isset($_GET['about'])){
+  get_template_part( 'parts/home', 'midsection' );
+}
+?>
 
 <?php get_template_part( 'parts/home', 'features' ); ?>
 
