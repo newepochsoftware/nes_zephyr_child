@@ -118,7 +118,7 @@ function glowfish_my_lead($entry, $form) {
   $email  = rgar($entry, '4');
   $phone  = rgar($entry, '6');
 
-  require_once(__DIR__ . "/_inc/Colugo/API/API.php");
+  require_once(__DIR__ . "/Colugo/API/API.php");
   try {
     $user = new Colugo\API\User($gf_email, $gf_apikey);
     $api = new \Colugo\API\API($user);
