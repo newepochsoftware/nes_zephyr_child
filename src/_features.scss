@@ -51,6 +51,10 @@
     font-size: 1.35rem;
     color: $dark-gray;
 
+    @include breakpoint(medium down){
+      font-size: 1.15rem;
+      line-height: 1.8rem;
+    }
     @include breakpoint(small down){
       font-size: 1.25rem;
       line-height: 1.8rem;
@@ -132,7 +136,7 @@
           position: relative;
           left: -150%;
           @include breakpoint(899px down){
-            left: -24rem;
+            left: -14rem;
           }
           @include breakpoint(small down){
             left: initial;
@@ -140,8 +144,9 @@
           }
         }
         @include breakpoint(899px down){
-          height: 380px;
+          height: 385px;
           width: 540px;
+          left: 0;
         }
 
         @include breakpoint(small down){
