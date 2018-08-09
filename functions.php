@@ -143,6 +143,50 @@ function glowfish_my_lead($entry, $form) {
     return true;
 }
 
+add_action( 'gform_after_submission_5', 'glowfish_my_contact', 10, 2);
+function glowfish_my_contact($entry, $form) {
+
+  /**
+   * Set API info
+   */
+  $gf_email   = 'michael@newepochsoftware.com';
+  $gf_apikey  = 'k2jKv_1022838621137371982c5dbb17255febdaa3e1cc';
+
+  /**
+   * Set field mapping
+   */
+  $f_name  = rgar($entry, '2');
+  $l_name  = rgar($entry, '8');
+  $email   = rgar($entry, '6');
+  $phone   = rgar($entry, '4');
+  $message = rgar($entry, '7');
+
+  require_once(__DIR__ . "/Colugo/API/API.php");
+  try {
+    $user = new Colugo\API\User($gf_email, $gf_apikey);
+    $api = new \Colugo\API\API($user);
+    $lead = new \Colugo\API\Lead();
+
+    $lead->setLeadIpAddress($_SERVER["REMOTE_ADDR"]);
+    $lead->setLeadSource("NEWEPOCH");
+    $lead->setFields([
+          "First Name"  => $f_name,
+          "Last Name"   => $l_name,
+          "Email"       => $email,
+          "Work Phone"  => $phone,
+          "Message"     => $message,
+          "Profile"     => 'GeneralContact',
+          ]);
+
+    $api->post($lead);
+
+  } catch (\Exception $e) {
+    file_put_contents("php://stderr", "COLUGO MAIL ERROR: ".$e->getMessage()."\n");
+    return false;
+  }
+    return true;
+}
+
 
 /**
  * Add Tealium
