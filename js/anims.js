@@ -73,6 +73,24 @@ if(document.getElementById('honeycomb')){
   });
 
   /**
+   * Slide screenshot
+   */
+  var toggleState = false;
+  $('#top_tablet').on('click', function(e){
+    e.preventDefault();
+
+    console.log(window.innerWidth);
+
+    if(!toggleState && window.innerWidth <= 1024){
+      $(this).animate({'left': '-30rem'}, 500);
+      toggleState = true;
+    } else {
+      $(this).animate({'left': '2rem'}, 500);
+      toggleState = false;
+    }
+  });
+
+  /**
    * Slide Menu animation
    */
   if($('#toggle-platform-menu')){

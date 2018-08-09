@@ -35,7 +35,7 @@ $themePath = get_stylesheet_directory_uri();
     </div>
 
     <div class="grid-x marquee-content">
-      <div class="cell small-12 medium-9 large-9">
+      <div class="cell small-12 medium-9 large-8">
         <h1>Lead Verified is your solution for<br> <span id="typing" class="typing"></span></h1>
         <p>Lead Verified provides visit history, archival, data recovery, and authenticity certificates for your webleads and user-generated content. We process thousands of leads per day so our clients can buy, sell, and integrate leads while supporting <span class="hilite">TCPA</span>, <span class="hilite">GDPR</span>, and <span class="hilite">MiFID</span> compliance requirements.</p>
         
@@ -73,8 +73,8 @@ $themePath = get_stylesheet_directory_uri();
         <!-- Trusted Grid -->
 
       </div>
-      <div class="cell small-12 medium-3 large-3 hide-for-small-only">
-        <div class="tablet"></div>
+      <div class="cell small-12 medium-3 large-4 hide-for-small-only">
+        <div id="top_tablet" class="tablet"></div>
       </div>
     </div>
 

@@ -1,8 +1,11 @@
 .features {
   position: relative;
   z-index: 5;
-  /*margin-top: -15rem;*/
   margin-bottom: 5rem;
+
+  @include breakpoint(medium down){
+    margin-bottom: 1rem;
+  }
 
   .molecules2 {
     position: absolute;
@@ -48,7 +51,7 @@
   }
   p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: $dark-gray;
 
     @include breakpoint(medium down){
@@ -84,9 +87,10 @@
     }
 
     &:last-child {
+      margin-bottom: 6rem;
 
-      @include breakpoint(small down){
-        margin-bottom: 0;
+      @include breakpoint(medium down){
+        margin-bottom: 5rem;
       }
     }
 
@@ -112,27 +116,27 @@
         z-index: 10;
 
         &.heatmap {
-          background-image: url('../img/devices/heatmap@2x.png');
+          background-image: url('../img/devices/heatmaps@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
         &.compliance {
-          background-image: url('../img/devices/marquee@2x.png');
+          background-image: url('../img/devices/compliance@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
         &.capture {
-          background-image: url('../img/devices/capture@2x.png');
+          background-image: url('../img/devices/proof@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
         &.score {
-          background-image: url('../img/devices/score@2x.png');
+          background-image: url('../img/devices/leadscoring@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
         &.data {
-          background-image: url('../img/devices/storage@2x.png');
+          background-image: url('../img/devices/warehousing@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
         &.reports {
-          background-image: url('../img/devices/reports@2x.png');
+          background-image: url('../img/devices/fraudprevention@2x.png');
           filter: drop-shadow(12px 10px 0 rgba(0,0,0,0.1));
         }
 

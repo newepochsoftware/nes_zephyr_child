@@ -16,11 +16,7 @@ if(isset($_GET['about'])){
 
 <?php get_template_part( 'parts/home', 'features' ); ?>
 
-<?php 
-if(isset($_GET['pricing'])) {
-  get_template_part( 'parts/home', 'pricingopts' ); 
-}
-?>
+<?php get_template_part( 'parts/home', 'pricingopts' ); ?>
 
 <?php get_template_part( 'parts/home', 'formblock' ); ?>
 

@@ -1,6 +1,5 @@
 <div class="options">
-  <div class="angle_6"></div>
-
+  
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell small-12 pricingInfo text-center">
