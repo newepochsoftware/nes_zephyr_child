@@ -21,10 +21,10 @@ $themePath = get_stylesheet_directory_uri();
       
       <div class="grid-x logo-grid navbar" id="navbar">
         <div class="nav_background" id="nav_background"></div>
-        <div class="cell small-6 large-6">
+        <div class="cell small-9 medium-4 large-4">
           <div class="logo"><a href="/" class="homelink"></a></div>
         </div>
-        <div class="cell small-6 large-6 menublock">
+        <div class="cell small-3 medium-8 large-8 menublock">
           <button id="toggle-platform-menu" class="hamburger hamburger--boring hide-for-large" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
