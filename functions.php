@@ -6,6 +6,17 @@ define('THEME_PATH', get_stylesheet_directory_uri());
 define('LV_VERSION', $vMarker);
 
 /**
+ * Stripe.com Navigation System ("Broadnav")
+ * https://codyhouse.co/gem/stripe-navigation
+ * https://github.com/CodyHouse/stripe.com-navigation
+ */
+function add_broadnav_sys(){
+  wp_enqueue_style( 'nes_broadnav', THEME_PATH.'/css/broadnav_style.css', array(), LV_VERSION, 'all');
+  wp_enqueue_script( 'broadnav_sys', THEME_PATH.'/js/broadnav_sys.js', array(), LV_VERSION, true);
+}
+add_action( 'wp_enqueue_scripts', 'add_broadnav_sys', 998 );
+
+/**
  * Primary Custom CSS (including icon font)
  * Icon font generated at https://glyphter.com/
  */
@@ -89,13 +100,14 @@ function add_particles() {
 add_action( 'wp_enqueue_scripts', 'add_particles', 14 );
 
 /**
- * Register Extra Menu
+ * Register Extra Menus
  * 
  */
-function register_my_menu() {
+function register_my_menus() {
   register_nav_menu('nes2018-mainmenu',__( 'NES 2018 Main Menu' ));
+  register_nav_menu('nes2018-broadnav',__( 'NES 2018 Broadnav Menu' ));
 }
-add_action( 'init', 'register_my_menu' );
+add_action( 'init', 'register_my_menus' );
 
 /**
  * Submit form fills to Glowfish

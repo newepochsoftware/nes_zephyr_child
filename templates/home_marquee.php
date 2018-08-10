@@ -17,20 +17,23 @@ $themePath = get_stylesheet_directory_uri();
 
   <div class="grid-container">
     
-    <div class="platform-menu" id="platform-menu">
-      <?php get_template_part( 'parts/home', 'menu' ); ?>
-    </div>
-    
     <div class="grid-x logo-grid navbar" id="navbar">
-      <div class="cell small-6 large-6">
+      <div class="nav_background" id="nav_background"></div>
+      <div class="cell small-9 medium-4 large-4">
         <div class="logo"><a href="/" class="homelink"></a></div>
       </div>
-      <div class="cell small-6 large-6 menublock">
-        <button id="toggle-platform-menu" class="hamburger hamburger--boring" type="button">
+      <div class="cell small-3 medium-8 large-8 menublock">
+        <!-- Hide for all except mobile -->
+        <button id="toggle-platform-menu" class="hamburger hamburger--boring hide-for-large" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
+        <!-- Show for all except mobile -->
+        <?php get_template_part('parts/home', 'broadnav'); ?>
+      </div>
+      <div class="platform-menu" id="platform-menu">
+        <?php get_template_part( 'parts/home', 'mobilemenu' ); ?>
       </div>
     </div>
 

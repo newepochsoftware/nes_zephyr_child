@@ -40,6 +40,19 @@ if(document.getElementById('honeycomb')){
 /** jQuery Encapsulation */
 (function($){
 
+  if(window.scrollY >= 100){
+    $('#nav_background').css('opacity', 1);
+  }
+
+  $(window).on('scroll', function(){
+    if(window.scrollY <= 100){
+      $('#nav_background').css('opacity', window.scrollY/100);
+    } else {
+      $('#nav_background').css('opacity', 1);
+    }
+  });
+  
+
   /**
    * Mobile Detection
    */
